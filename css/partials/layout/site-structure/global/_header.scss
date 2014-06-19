@@ -1,0 +1,16 @@
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
+   ====================================================================================== */
+
+.header {
+  background-color: $color-white;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+/* Express parking heading */
+h1 {
+  display: inline-block;
+  @include to-rem(margin, 5 0 0 5);
+  @include font-size($font-size-xlrg, 1.2);
+  text-transform: uppercase;
+}
