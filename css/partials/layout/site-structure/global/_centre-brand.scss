@@ -1,0 +1,25 @@
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
+   ====================================================================================== */
+
+.wrap__centre-brand {
+  @include to-rem(min-height, 44);
+  @include to-rem(padding-top padding-bottom, 7);
+}
+
+  /* National logo */
+  .national__logo {
+    width: 82px;
+    height: 26px;
+    position: relative;
+    @include to-rem(top, $spacing-micro);
+    vertical-align: top;
+  }
+
+  /* Centre name */
+  .header__centre-name {
+    display: inline-block;
+    @include to-rem(margin, 5 0 0 5);
+    @include font-size($font-size-xlrg, 1.2);
+    text-transform: uppercase;
+  }

@@ -35,6 +35,17 @@
   Note: any variables you find set in css-framework’ '_vars.scss' that you do not wish to keep, simply redefine here. This means that if css-framework, for example, sets your `$font-size` at `14px` and you wish it to be `16px`, simply redeclare it here, see example below. css-framework ignores its own variables in favour of using your own, so you can completely modify how css-framework works without ever having to alter the framework itself. Just make sure to declare your overrides here and do not use the `!default` keyword.
 */
 
+/* Greys */
+
+/* Dark */
+$color-grey-dark: #cdcdcd;
+
+/* Medium */
+$color-grey-med: #e8e8e8;
+
+/* Light */
+$color-grey-light: #f2f2f2;
+
 $width-classes-at-breakpoint-non-palm: true;
 
 /* [IMPORT THE FRAMEWORK]
@@ -71,17 +82,19 @@ $width-classes-at-breakpoint-non-palm: true;
 @import "css-framework/imports/helpers";
 
 /* Print */
-//@import "css-framework/imports/print";
+@import "css-framework/imports/print";
 
 /* [IMPORT YOUR PROJECT-SPECIFIC PARTIALS]
 -------------------------------------------------------*/
 
-@import "partials/utils/_vars.scss";
-@import "partials/base/_headings.scss";
-
-@import "partials/layout/site-structure/global/_header.scss";
-@import "partials/layout/site-structure/global/_footer.scss";
-
 /*
   Note: see recommended partial directory structure above.
 */
+
+@import "partials/utils/_vars.scss";
+@import "partials/base/_headings.scss";
+@import "partials/base/_main.scss";
+
+@import "partials/layout/site-structure/global/_centre-brand.scss";
+@import "partials/layout/site-structure/global/_header.scss";
+@import "partials/layout/site-structure/global/_footer.scss";

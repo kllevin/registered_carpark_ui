@@ -19,7 +19,7 @@
   <!-- //Only use for responsive UI's -->
 
   <!-- Prefetch DNS for external assets -->
-  <link rel="dns-prefetch" href="">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <!-- //Prefetch DNS for external assets -->
 
   <!-- Title -->
@@ -43,15 +43,28 @@
 
 <body>
 
-<header class="header" role="banner">
-  <div class="container">
-    <button type="button" class="btn btn--menu">
+  <!-- Skip link - make sure the main content element has `id="main"` -->
+  <a href="#main" class="hide-visually skip-link">Skip to main content</a>
+  <!-- //Skip link - make sure the main content element has `id="main"` -->
 
-    </button>
+  <!-- Old IE banner -->
+  <!--[if lte IE 8]>
+  <div class="old-ie-banner"><div class="old-ie-banner__inner"><div class="grid"><div class="grid__item two-fifths"><em class="h1">Your current browser is not supported</em><p>To get the best Westfield has to offer, you'll need to upgrade to a modern browser.</p><ul><li><a href="http://windows.microsoft.com/en-gb/internet-explorer/download-ie" target="_blank" rel="external"><img alt="Internet Explorer" height="40" src="/images/old-ie-banner/ie.png" width="40" />Internet<br>Explorer 9+</a></li><li><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank" rel="external"><img alt="Chrome" height="40" src="/images/old-ie-banner/chrome.png" width="38" />Chrome</a></li><li><a href="https://www.mozilla.org/en-US/firefox/new/?utm_source=firefox-com&amp;utm_medium=referral" target="_blank" rel="external"><img alt="Firefox" height="40" src="/images/old-ie-banner/firefox.png" width="38" />Firefox</a></li><li><a href="http://support.apple.com/kb/DL1531" target="_blank" rel="external"><img alt="Safari" height="40" src="/images/old-ie-banner/safari.png" width="36" />Safari</a></li></ul></div><div class="grid__item three-fifths txt-right"><img alt="Screengrab of Westfield centre" height="254" src="/images/old-ie-banner/screengrab.jpg" width="600" /></div></div></div></div>
+  <![endif]-->
+  <!-- //Old IE banner -->
 
-    <a class="logo">
-      <img alt="Westfield" src="/images/logo.svg">
-    </a>
-    <h1>Miranda</h1>
-  </div>
-</header>
+  <!-- Header banner -->
+  <header class="header header--hero" role="banner">
+    <div class="header__secondary">
+      <div class="wrap__centre-brand">
+        <a href="" class="logo">
+          <img alt="Westfield" class="national__logo" src="/images/logo.svg">
+        </a>
+        <h1 class="header__centre-name">Miranda</h1>
+      </div>
+    </div>
+  </header>
+  <!-- //Header banner -->
+
+  <!-- Main content -->
+  <main id="main" role="main">
