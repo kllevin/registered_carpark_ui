@@ -4043,22 +4043,8 @@ h1, .h1 {
 }
 
 /* ======================================================================================
-   @BASE -> MAIN
-   ====================================================================================== */
-body {
-  background-color: #e8e8e8;
-  padding-bottom: 1.5rem;
-}
-
-/* ======================================================================================
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
    ====================================================================================== */
-.wrap__centre-brand {
-  min-height: 3.14286rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 /* National logo */
 .national__logo {
   width: 82px;
@@ -4069,7 +4055,7 @@ body {
 }
 
 /* Centre name */
-.header__centre-name {
+.centre-brand-combo__centre {
   display: inline-block;
   margin: 0.35714rem 0rem 0rem 0.35714rem;
   font-size: 1.71429rem;
@@ -4080,7 +4066,9 @@ body {
 /* ======================================================================================
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
    ====================================================================================== */
-.header__secondary {
+.header {
+  min-height: 3.14286rem;
+  padding: 0.71429rem;
   background-color: white;
   color: black;
 }

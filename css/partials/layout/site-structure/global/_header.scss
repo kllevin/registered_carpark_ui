@@ -2,7 +2,10 @@
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
    ====================================================================================== */
 
-  .header__secondary {
+  .header {
+    @include to-rem(min-height, 44);
+    @include to-rem(padding, 10);
+    //@include to-rem(padding-top padding-bottom, 7);
     background-color: $color-white;
     color: $color-black;
   }
