@@ -91,9 +91,13 @@ $width-classes-at-breakpoint-non-palm: true;
   Note: see recommended partial directory structure above.
 */
 
+/* Utils */
 @import "partials/utils/_vars.scss";
+
+/* Base */
 @import "partials/base/_headings.scss";
 
-@import "partials/layout/site-structure/global/_centre-brand.scss";
-@import "partials/layout/site-structure/global/_header.scss";
-@import "partials/layout/site-structure/global/_footer.scss";
+  /* Layout -> Site Structure -> Global */
+  @import "partials/layout/site-structure/global/_centre-brand.scss";
+  @import "partials/layout/site-structure/global/_header.scss";
+  @import "partials/layout/site-structure/global/_footer.scss";

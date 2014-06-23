@@ -4027,12 +4027,14 @@ legend.hide-visually {
 /*
   Note: see recommended partial directory structure above.
 */
+/* Utils */
 /* ======================================================================================
    @UTILS -> VARIABLES
    ====================================================================================== */
 /* [MORE TYPOGRAPHY]
 -------------------------------------------------------*/
 /* Families */
+/* Base */
 /* ======================================================================================
    @BASE -> HEADINGS
    ====================================================================================== */
@@ -4042,11 +4044,15 @@ h1, .h1 {
   font-weight: 300;
 }
 
+/* Layout -> Site Structure -> Global */
 /* ======================================================================================
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
    ====================================================================================== */
+/*
+    A small piece of UI that includes the Westfield logo and centre name, currently shared across the site header and footer. The main goal of these styles is to have each component horizontally aligned.
+*/
 /* National logo */
-.national__logo {
+.centre-brand-combo__brand {
   width: 82px;
   height: 26px;
   position: relative;
@@ -4067,8 +4073,7 @@ h1, .h1 {
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
    ====================================================================================== */
 .header {
-  min-height: 3.14286rem;
-  padding: 0.71429rem;
+  padding: 0.75rem 1.5rem;
   background-color: white;
   color: black;
 }
