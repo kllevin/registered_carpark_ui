@@ -1,0 +1,59 @@
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> FOOTER
+   ====================================================================================== */
+
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  a {
+    color: $color-white;
+  }
+}
+
+  .footer__nav {
+    background-color: $color-grey-dark;
+
+    li {
+      @include to-rem(padding, $spacing-half 0);
+      border-bottom: 1px solid $color-black;
+
+      a {
+        display: block;
+        color: $color-grey-med;
+      }
+    }
+    @include respond-min($non-palm) {
+      li {
+        display: inline-block;
+        border-bottom: 0;
+        @include to-rem(padding-right, $spacing-base);
+      }
+    }
+  }
+
+  .footer__social {
+
+    @include to-rem(padding-bottom, $spacing-half);
+
+    a {
+      @include to-rem(margin-left, $spacing-half);
+    }
+
+    @include respond-min($non-palm) {
+      @include to-rem(padding, $spacing-base 0 0);
+      text-align: right;
+    }
+  }
+
+  .footer__copyright {
+    color: $color-grey-med;
+    font-size: $font-size-smler;
+
+    @include respond-min($non-palm) {
+     text-align: right;
+    }
+  }

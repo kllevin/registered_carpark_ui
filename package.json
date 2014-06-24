@@ -1,0 +1,13 @@
+{
+  "author": "Kate Levin",
+  "name": "express-parking",
+  "version": "0.0.0",
+  "private": true,
+  "main": "express-parking",
+  "engines": {
+    "node": ">=0.10.29"
+  },
+  "dependencies": {
+    "express": "4.4.4"
+  }
+}

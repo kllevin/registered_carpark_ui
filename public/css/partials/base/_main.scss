@@ -1,9 +1,7 @@
 /* ======================================================================================
-   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> FOOTER
+   @BASE -> MAIN
    ====================================================================================== */
 
-.footer {
-  background-color: $color-black;
-  color: $color-white;
-
+body {
+  background-color: $color-grey-med;
 }

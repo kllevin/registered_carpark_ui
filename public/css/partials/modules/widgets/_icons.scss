@@ -1,0 +1,252 @@
+/* ======================================================================================
+   @MODULES -> ICON
+   ====================================================================================== */
+
+/*
+  Applies an icon font and nothing else (similar to the sprite module).
+*/
+
+.icon:before {
+  @extend %sprite-icon;
+  speak: none;
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Set icons */
+
+/*
+  Note: make sure to use the Unicode Private Use Area.
+*/
+
+.icon-t-shirt:before {
+  content: "\e000";
+}
+.icon-tag:before {
+  content: "\e001";
+}
+.icon-shop:before {
+  content: "\e002";
+}
+.icon-calendar:before {
+  content: "\e003";
+}
+.icon-film:before {
+  content: "\e004";
+}
+.icon-phone:before {
+  content: "\e005";
+}
+.icon-phone-sign:before {
+  content: "\e006";
+}
+.icon-sort:before {
+  content: "\e007";
+}
+.icon-caret-left:before {
+  content: "\e008";
+}
+.icon-caret-right:before {
+  content: "\e009";
+}
+.icon-caret-down:before {
+  content: "\e00a";
+}
+.icon-caret-up:before {
+  content: "\e00b";
+}
+.icon-food:before {
+  content: "\e00c";
+}
+.icon-location-arrow:before {
+  content: "\e00d";
+}
+.icon-close:before {
+  content: "\e00f";
+}
+.icon-comment:before {
+  content: "\e010";
+}
+.icon-cross:before {
+  content: "\e011";
+}
+.icon-checkmark:before {
+  content: "\e012";
+}
+.icon-search:before {
+  content: "\e014";
+}
+.icon-arrow-right:before {
+  content: "\e015";
+}
+.icon-arrow-left:before {
+  content: "\e016";
+}
+.icon-arrow-down:before {
+  content: "\e017";
+}
+.icon-arrow-up:before {
+  content: "\e018";
+}
+.icon-arrow-left-2:before {
+  content: "\e019";
+}
+.icon-arrow-down-2:before {
+  content: "\e01a";
+}
+.icon-arrow-up-2:before {
+  content: "\e01b";
+}
+.icon-untitled:before {
+  content: "\e01c";
+}
+.icon-info:before {
+  content: "\e01d";
+}
+.icon-location:before {
+  content: "\e01e";
+}
+.icon-map:before {
+  content: "\e01f";
+}
+.icon-mail:before {
+  content: "\e020";
+}
+.icon-clock:before {
+  content: "\e021";
+}
+.icon-twitter:before {
+  content: "\e022";
+}
+.icon-facebook:before {
+  content: "\e023";
+}
+.icon-pinterest:before {
+  content: "\e024";
+}
+.icon-google-plus:before {
+  content: "\e025";
+}
+.icon-export:before {
+  content: "\e026";
+}
+.icon-check-alt:before {
+  content: "\e027";
+}
+.icon-x-altx-alt:before {
+  content: "\e028";
+}
+.icon-map-2:before {
+  content: "\e029";
+}
+.icon-user:before {
+  content: "\e02a";
+}
+.icon-list-ul:before {
+  content: "\e02b";
+}
+.icon-double-angle-up:before {
+  content: "\e02c";
+}
+.icon-double-angle-down:before {
+  content: "\e02d";
+}
+.icon-service_bell:before {
+  content: "\e02f";
+}
+.icon-icon_heart:before {
+  content: "\e030";
+}
+.icon-instagram:before {
+  content: "\e032";
+}
+.icon-youtube:before {
+  content: "\e033";
+}
+.icon-ellipsis-horizontal:before {
+  content: "\e034";
+}
+.icon-ellipsis-vertical:before {
+  content: "\e035";
+}
+.icon-plus:before {
+  content: "\e036";
+}
+.icon-file-pdf:before {
+  content: "\e037";
+}
+.icon-iconmonstr-giftcard-icon:before {
+  content: "\e038";
+}
+.icon-icon_shirt:before {
+  content: "\e03b";
+}
+.icon-play:before {
+  content: "\e03c";
+}
+.icon-bullhorn:before {
+  content: "\e03d";
+}
+.icon-docs:before {
+  content: "\e03e";
+}
+.icon-icon_collection:before {
+  content: "\e03f";
+}
+.icon-external-link:before {
+  content: "\f08e";
+}
+.icon-icon_filterby:before {
+  content: "\e00e";
+}
+
+/* Modifiers */
+
+/* Modifier: apply some spacing between the icon element and adjacent text */
+.icon--spacing:before {@include to-em(margin-right, $spacing-sixth);}
+
+.icon--spacing-lrg:before {@include to-em(margin-right, $spacing-third);}
+
+/* Modifier: remove the negative 1px top positiong */
+.icon--flush-top:before {position: static;}
+
+/* Firefox */
+@include target-mozilla {
+  .icon--flush-top-mozilla:before {position: static;}
+}
+
+/* Modifier: fixed width */
+.icon--fixed-width:before {
+  width: 1em;
+  text-align: center;
+}
+
+/* Modifier: small */
+.icon--sml:before {@include font-size($font-size-sml, 1);}
+
+/* Modifier: large */
+.icon--lrg:before {@include font-size($font-size-lrg, 1);}
+
+.icon--lrger:before {@include font-size($font-size-lrger, 1);}
+
+.icon--xlrg:before {@include font-size($font-size-xlrg, 1);}
+
+/* Modifier: extra large */
+.icon--giga:before {@include font-size($font-size-giga, 1);}
+
+.icon--kilo:before {@include font-size($font-size-kilo, 1);}
+
+.icon--hecto:before {@include font-size($font-size-hecto, 1);}
+
+.icon--deca:before {@include font-size($font-size-deca, 1);}
+
+/* Modifier: restore base font size */
+.icon--base-size:before {font-size: inherit;}
+
+/* Modifier: restore base text colour */
+.icon--base-color:before {color: $color-txt-base;}
