@@ -1,0 +1,24 @@
+/* ======================================================================================
+   @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
+   ====================================================================================== */
+
+/*
+    A small piece of UI that includes the Westfield logo and centre name, currently shared across the site header and footer. The main goal of these styles is to have each component horizontally aligned.
+*/
+
+  /* National logo */
+  .centre-brand-combo__brand {
+    width: 82px;
+    height: 26px;
+    position: relative;
+    @include to-rem(top, $spacing-micro);
+    vertical-align: top;
+  }
+
+  /* Centre name */
+  .centre-brand-combo__centre {
+    display: inline-block;
+    @include to-rem(margin, 5 0 0 5);
+    @include font-size($font-size-xlrg, 1.2);
+    text-transform: uppercase;
+  }
