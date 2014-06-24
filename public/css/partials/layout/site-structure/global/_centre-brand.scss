@@ -7,7 +7,7 @@
 */
 
   /* National logo */
-  .centre-brand-combo__brand {
+  .centre-brand__brand {
     width: 82px;
     height: 26px;
     position: relative;
@@ -16,7 +16,7 @@
   }
 
   /* Centre name */
-  .centre-brand-combo__centre {
+  .centre-brand__centre {
     display: inline-block;
     @include to-rem(margin, 5 0 0 5);
     @include font-size($font-size-xlrg, 1.2);
