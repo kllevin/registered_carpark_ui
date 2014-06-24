@@ -97,7 +97,7 @@ $width-classes-at-breakpoint-non-palm: true;
 /* Base */
 @import "partials/base/_headings.scss";
 
-  /* Layout -> Site Structure -> Global */
-  @import "partials/layout/site-structure/global/_centre-brand.scss";
-  @import "partials/layout/site-structure/global/_header.scss";
-  @import "partials/layout/site-structure/global/_footer.scss";
+/* Layout -> Site Structure -> Global */
+@import "partials/layout/site-structure/global/_centre-brand.scss";
+@import "partials/layout/site-structure/global/_header.scss";
+@import "partials/layout/site-structure/global/_footer.scss";
