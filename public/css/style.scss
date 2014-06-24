@@ -38,7 +38,7 @@
 /* Greys */
 
 /* Dark */
-$color-grey-dark: #cdcdcd;
+$color-grey-dark: #29292b;
 
 /* Medium */
 $color-grey-med: #e8e8e8;
@@ -97,6 +97,7 @@ $width-classes-at-breakpoint-non-palm: true;
 /* Base */
 @import "partials/base/_fonts.scss";
 @import "partials/base/_headings.scss";
+@import "partials/base/_main.scss";
 
 /* Layout -> Site Structure -> Global */
 @import "partials/layout/site-structure/global/_centre-brand.scss";

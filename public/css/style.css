@@ -1967,7 +1967,7 @@ th {
   width: 1.42857rem;
   height: 3px;
   border-radius: 1px;
-  background-color: #cdcdcd;
+  background-color: #29292b;
 }
 .btn--menu__icon:before, .btn--menu__icon:after {
   content: "";
@@ -1990,7 +1990,8 @@ th {
 /* ======================================================================================
    @LAYOUT -> CONTAINERS
    ====================================================================================== */
-.container {
+.container,
+.container--palm {
   width: 92%;
   min-width: 15.71429rem;
   max-width: 114.28571rem;
@@ -1998,11 +1999,29 @@ th {
   /* Print */
 }
 @media print {
-  .container {
+  .container,
+  .container--palm {
     width: auto;
   }
 }
 
+/* Modifier: turn off container at non-palm */
+/* Screen media with width */
+@media (min-width: 40.0625em) {
+  .container--off-non-palm,
+  .container--palm {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .container--non-palm {
+    width: 92%;
+    min-width: 15.71429rem;
+    max-width: 114.28571rem;
+    margin: 0 auto;
+  }
+}
 /* Modifier: wide container */
 .container--wide {
   width: auto;
@@ -2066,7 +2085,7 @@ th {
 .form-field__lbl {
   display: block;
   margin-bottom: 0.25rem;
-  color: #cdcdcd;
+  color: #29292b;
 }
 
 /* Modifier: inline */
@@ -3959,7 +3978,7 @@ th {
   -webkit-animation: rotate 1s infinite linear;
   animation: rotate 1s infinite linear;
   border-radius: 100%;
-  border: 2px solid #cdcdcd;
+  border: 2px solid #29292b;
   /* the 'gap' in the preloader circle */
   /* Fallback for IE9 */
   /* Modifier: text will accompany the spinner */
@@ -4090,7 +4109,7 @@ th {
   position: absolute;
   /* Should be even number so it can be divided by 2 which is needed for positioning the line between `.timeline__date` */
   left: 1rem;
-  background-color: #cdcdcd;
+  background-color: #29292b;
   color: white;
   text-align: center;
   border-radius: 50%;
@@ -4149,7 +4168,7 @@ th {
   cursor: pointer;
 }
 .js .accordion__header:hover, .js .accordion__header:focus {
-  background: #cdcdcd;
+  background: #29292b;
   color: white;
 }
 @media print {
@@ -4785,6 +4804,13 @@ h1, .h1 {
   font-weight: 300;
 }
 
+/* ======================================================================================
+   @BASE -> MAIN
+   ====================================================================================== */
+body {
+  background-color: #e8e8e8;
+}
+
 /* Layout -> Site Structure -> Global */
 /* ======================================================================================
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> CENTRE-BRAND
@@ -4824,6 +4850,57 @@ h1, .h1 {
 .footer {
   background-color: black;
   color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer a {
+  color: white;
+}
+
+.footer__nav {
+  background-color: #29292b;
+  /* Screen media with width */
+}
+.footer__nav li {
+  padding: 0.75rem 0rem;
+  border-bottom: 1px solid black;
+}
+.footer__nav li a {
+  display: block;
+  color: #e8e8e8;
+}
+@media (min-width: 40.0625em) {
+  .footer__nav li {
+    display: inline-block;
+    border-bottom: 0;
+    padding-right: 1.5rem;
+  }
+}
+
+.footer__social {
+  padding-bottom: 0.75rem;
+  /* Screen media with width */
+}
+.footer__social a {
+  margin-left: 0.75rem;
+}
+@media (min-width: 40.0625em) {
+  .footer__social {
+    padding: 1.5rem 0rem 0rem;
+    text-align: right;
+  }
+}
+
+.footer__copyright {
+  color: #e8e8e8;
+  font-size: 12;
+  /* Screen media with width */
+}
+@media (min-width: 40.0625em) {
+  .footer__copyright {
+    text-align: right;
+  }
 }
 
 /* Modules */
@@ -4988,7 +5065,7 @@ h1, .h1 {
   content: "\e024";
 }
 
-.icon-googleplus:before {
+.icon-google-plus:before {
   content: "\e025";
 }
 
