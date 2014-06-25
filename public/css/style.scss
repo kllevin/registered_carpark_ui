@@ -25,7 +25,7 @@
       - WIDGETS ............more interactive rich requiring JavaScript/jQuery.
     - HELPERS...............a bunch of classes to apply very common styles.
     - PRINT.................global print styles (rest of print styles live inline).
-    - SHAME.................home for housing nasty, hacky, quick-fix CSS, see: http://csswizardry.com/2013/04/shame-css/.
+    - Third-party.................home for styles added by third parties and for housing nasty, hacky, quick-fix CSS, see: http://csswizardry.com/2013/04/shame-css/.
 */
 
 /* [OVERRIDES]
@@ -107,5 +107,5 @@ $width-classes-at-breakpoint-non-palm: true;
 /* Modules */
 @import "partials/modules/_icon.scss";
 
-/* Shame */
+/* Third-party */
 @import "partials/third-party/_third-party.scss";
