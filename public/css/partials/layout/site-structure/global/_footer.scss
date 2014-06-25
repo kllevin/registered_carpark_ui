@@ -6,11 +6,16 @@
   background-color: $color-black;
   color: $color-white;
 
+  &,
   a {color: $color-white;}
 }
 
-  .footer__social {
+  /* Shared */
+  .footer__nav a,
+  .footer__copyright {color: $color-grey-med;}
 
+  /* Social Follow links */
+  .footer__social {
     @include to-rem(padding-bottom, $spacing-half);
 
     @include respond-min($non-palm) {
@@ -25,6 +30,7 @@
     }
   }
 
+  /* External links */
   .footer__nav {
     background-color: $color-grey-dark;
 
@@ -43,13 +49,14 @@
       a {
         display: block;
         @include to-rem(padding-top padding-bottom, $spacing-half);
-        color: $color-grey-med;
       }
   }
 
+  /* Copyright statement */
   .footer__copyright {
-    color: $color-grey-med;
     @include font-size($font-size-smler);
 
-    @include respond-min($non-palm) {text-align: right;}
+    @include respond-min($non-palm) {
+      text-align: right;
+    }
   }

@@ -4851,10 +4851,18 @@ body {
   background-color: black;
   color: white;
 }
+.footer,
 .footer a {
   color: white;
 }
 
+/* Shared */
+.footer__nav a,
+.footer__copyright {
+  color: #e8e8e8;
+}
+
+/* Social Follow links */
 .footer__social {
   padding-bottom: 0.75rem;
   /* Screen media with width */
@@ -4872,6 +4880,7 @@ body {
   padding-right: 0;
 }
 
+/* External links */
 .footer__nav {
   background-color: #29292b;
 }
@@ -4893,11 +4902,10 @@ body {
   display: block;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #e8e8e8;
 }
 
+/* Copyright statement */
 .footer__copyright {
-  color: #e8e8e8;
   font-size: 0.85714rem;
   line-height: 1.75;
   /* Screen media with width */
@@ -5155,3 +5163,15 @@ body {
 .icon-icon_filterby:before {
   content: "\e00e";
 }
+
+/* Shame */
+/* ======================================================================================
+   @THIRD-PARTY -> THIRD-PARTY
+   ====================================================================================== */
+/*
+  Usage: a stylesheet dedicated for back-end devs to house their quick-fix CSS when there's no time for a front-end dev to write the CSS.
+
+  Note: ideally the CSS in this stylesheet shouldn't make it into production rather it should be looked at and intergrated into the CSS architecture prior to that. This stylesheet is imported last so anything you put here should override all other CSS, if you're having trouble then use the sledgehammer: `!important`.
+
+  Credit: http://csswizardry.com/2013/04/shame-css/
+*/
