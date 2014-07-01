@@ -35,17 +35,38 @@
   Note: any variables you find set in css-framework’ '_vars.scss' that you do not wish to keep, simply redefine here. This means that if css-framework, for example, sets your `$font-size` at `14px` and you wish it to be `16px`, simply redeclare it here, see example below. css-framework ignores its own variables in favour of using your own, so you can completely modify how css-framework works without ever having to alter the framework itself. Just make sure to declare your overrides here and do not use the `!default` keyword.
 */
 
+/* Grid/Layout */
+
+/* Page container min width */
+$page-container-min-width: 280 !default;
+
+/* Page container max width */
+$page-container-max-width: 1200 !default;
+
 /* Greys */
 
 /* Dark */
 $color-grey-dark: #29292b;
 
-/* Medium */
-$color-grey-med: #e8e8e8;
-
 /* Light */
-$color-grey-light: #f2f2f2;
+$color-grey-light: #e8e8e8;
 
+/* Text */
+
+/* Base */
+$color-txt-base: #000;
+
+/* Link colours */
+$color-link: #256e9e !default;
+
+/* Feedback colours */
+
+/* Error */
+$color-feedback-error: #da291c !default;
+
+/* Specific breakpoint classes */
+
+/* Width classes - mainly used with the grid */
 $width-classes-at-breakpoint-non-palm: true;
 
 /* [IMPORT THE FRAMEWORK]
@@ -55,11 +76,6 @@ $width-classes-at-breakpoint-non-palm: true;
   Note: by default everything is imported. But if you want to be selective and you definitely should, so your CSS is as lean as possible, then import via groups e.g. Abstractions or at the individual partial level. If you only want specific partials then grab the relevant `@import` from the relevant file in 'css-framework/partials/imports' and update the path. If you're being selective then make sure to import in the correct order which is specified below.
 */
 
-/* Import everything */
-//@import "css-framework/imports/everything";
-
-/* Be selective */
-
 /* Utils */
 @import "css-framework/imports/utils";
 
@@ -67,7 +83,8 @@ $width-classes-at-breakpoint-non-palm: true;
 @import "css-framework/imports/base";
 
 /* Buttons */
-@import "css-framework/imports/buttons";
+@import "css-framework/buttons/base";
+@import "css-framework/buttons/main";
 
 /* Layout */
 @import "css-framework/imports/layout";
@@ -76,7 +93,7 @@ $width-classes-at-breakpoint-non-palm: true;
 @import "css-framework/imports/abstractions";
 
 /* Modules */
-@import "css-framework/imports/modules";
+@import "css-framework/modules/icon";
 
 /* Helpers */
 @import "css-framework/imports/helpers";
@@ -92,20 +109,28 @@ $width-classes-at-breakpoint-non-palm: true;
 */
 
 /* Utils */
-@import "partials/utils/_vars.scss";
+@import "partials/utils/vars";
 
 /* Base */
-@import "partials/base/_fonts.scss";
-@import "partials/base/_headings.scss";
-@import "partials/base/_main.scss";
+@import "partials/base/fonts";
+@import "partials/base/headings";
+@import "partials/base/main";
 
-/* Layout -> Site Structure -> Global */
-@import "partials/layout/site-structure/global/_centre-brand.scss";
-@import "partials/layout/site-structure/global/_header.scss";
-@import "partials/layout/site-structure/global/_footer.scss";
+/* Layout */
+@import "partials/layout/containers";
+
+  /* Layout -> Site Structure -> Global */
+  @import "partials/layout/site-structure/global/centre-brand";
+  @import "partials/layout/site-structure/global/header";
+  @import "partials/layout/site-structure/global/footer";
+  @import "partials/layout/site-structure/global/main";
+  @import "partials/layout/site-structure/global/old-ie-banner";
 
 /* Modules */
-@import "partials/modules/_icon.scss";
+@import "partials/modules/icon";
+
+/* Helpers */
+@import "partials/helpers/text";
 
 /* Third-party */
-@import "partials/third-party/_third-party.scss";
+@import "partials/third-party/third-party";

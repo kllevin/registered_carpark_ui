@@ -4,59 +4,45 @@
 
 .footer {
   background-color: $color-black;
-  color: $color-white;
 
   &,
   a {color: $color-white;}
+
+  a:hover,
+  a:focus {opacity: 0.8;}
 }
 
   /* Shared */
-  .footer__nav a,
-  .footer__copyright {color: $color-grey-med;}
+  @include respond-min($non-palm) {
+    .footer__social,
+    .footer__legal--copyright {text-align: right;}
+  }
 
-  /* Social Follow links */
+  /* Social follow links */
   .footer__social {
-    @include to-rem(padding-bottom, $spacing-half);
+    @include to-rem(padding-top, $spacing-base);
 
     @include respond-min($non-palm) {
-      @include to-rem(padding, $spacing-base 0 0);
-      text-align: right;
-    }
-
-    li {
-      @include to-rem(padding-right, $spacing-half);
-
-      &:last-child {padding-right: 0;}
+      padding-top: 0;
     }
   }
 
-  /* External links */
-  .footer__nav {
-    background-color: $color-grey-dark;
-
-    li {
-      border-bottom: 1px solid $color-black;
-
-      @include respond-min($non-palm) {
-        display: inline-block;
-        border-bottom: 0;
-        @include to-rem(padding-right, $spacing-base);
-
-        &:last-child {padding-right: 0;}
-      }
-    }
-
-      a {
-        display: block;
-        @include to-rem(padding-top padding-bottom, $spacing-half);
-      }
+  /* Legal */
+  .footer__legal {
+    &,
+    a {color: $color-grey-med-light;}
   }
 
-  /* Copyright statement */
-  .footer__copyright {
-    @include font-size($font-size-smler);
+  /* Modifier: T&C's */
+  .footer__legal--terms a {
+    display: block;
 
     @include respond-min($non-palm) {
-      text-align: right;
+      display: inline-block;
     }
+  }
+
+  /* Modifier: copyright */
+  @include respond-min($non-palm) {
+    .footer__legal--copyright {@include to-rem(margin-top, -41);}
   }

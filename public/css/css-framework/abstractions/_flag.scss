@@ -25,6 +25,15 @@
   width: 100%;
 }
 
+/* Modifier: turn off at palm size */
+.flag--off-palm {
+  display: block;
+
+  @include respond-min($non-palm) {
+    display: table;
+  }
+}
+
 /* Modifier: shrink wrap */
 .flag--shrink-wrap {width: auto;}
 
@@ -38,6 +47,15 @@
 
     /* Modifier: bottom alignment */
     .flag--align-btm & {vertical-align: bottom;}
+
+    /* Modifier: turn off at palm size */
+    .flag--off-palm & {
+      display: block;
+
+      @include respond-min($non-palm) {
+        display: table-cell;
+      }
+    }
   }
 
   .flag__img {
@@ -54,4 +72,13 @@
 
     /* Modifier: half spacing between image- and text-like content when used with 'Reversed' modifier */
     .flag--rev.flag--gutter-half & {@include to-rem(padding-left, $spacing-half);}
+
+    /* Modifier: turn off at palm size */
+    .flag--off-palm & {
+      padding-right: 0;
+
+      @include respond-min($non-palm) {
+        @include to-rem(padding-right, $spacing-base);
+      }
+    }
   }

@@ -1,0 +1,161 @@
+<!doctype html>
+<!--[if (IE 9) & (!IEMobile)]>    <html class="no-js ie-9" lang="en">    <![endif]-->
+<!--[if gt IE 8]><!-->            <html class="no-js" lang="en-au">      <!--<![endif]-->
+<head>
+  <!-- Replace `no-js` `html` hook with `js` hook -->
+  <script>
+    (function() {
+      var html = document.getElementsByTagName('html')[0]
+      html.className = html.className.replace( /(?:^|\s)no-js(?!\S)/g , 'js' );
+    })()
+  </script>
+  <!-- //Replace `no-js` `html` hook with `js` hook -->
+
+  <meta charset="utf-8">
+
+  <!-- Only use for responsive UI's -->
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <!-- //Only use for responsive UI's -->
+
+  <!-- Prefetch DNS for external assets -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <!-- //Prefetch DNS for external assets -->
+
+  <!-- Title -->
+  <title></title>
+  <!-- //Title -->
+
+  <!-- Google Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Lato:300|Open+Sans" rel="stylesheet">
+  <!-- //Google Fonts -->
+
+  <!-- Global CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <!-- //Global CSS -->
+
+  <!-- IE 10+ tile icon: http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx -->
+  <meta name="msapplication-TileColor" content="#da291c">
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <!-- //IE 10+ tile icon -->
+
+</head>
+
+<body>
+
+  <!-- Skip link - make sure the main content element has `id="main"` -->
+  <a href="#main" class="hide-visually skip-link">Skip to main content</a>
+  <!-- //Skip link - make sure the main content element has `id="main"` -->
+
+  <!-- Old IE banner -->
+  <!--[if lte IE 8]>
+  <div class="old-ie-banner"><div class="old-ie-banner__inner"><div class="grid"><div class="grid__item two-fifths"><em class="h1">Your current browser is not supported</em><p>To get the best Westfield has to offer, you'll need to upgrade to a modern browser.</p><ul><li><a href="http://windows.microsoft.com/en-gb/internet-explorer/download-ie" target="_blank" rel="external"><img alt="Internet Explorer" height="40" src="/images/old-ie-banner/ie.png" width="40" />Internet<br>Explorer 9+</a></li><li><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank" rel="external"><img alt="Chrome" height="40" src="/images/old-ie-banner/chrome.png" width="38" />Chrome</a></li><li><a href="https://www.mozilla.org/en-US/firefox/new/?utm_source=firefox-com&amp;utm_medium=referral" target="_blank" rel="external"><img alt="Firefox" height="40" src="/images/old-ie-banner/firefox.png" width="38" />Firefox</a></li><li><a href="http://support.apple.com/kb/DL1531" target="_blank" rel="external"><img alt="Safari" height="40" src="/images/old-ie-banner/safari.png" width="36" />Safari</a></li></ul></div><div class="grid__item three-fifths txt-right"><img alt="Screengrab of Westfield centre" height="254" src="/images/old-ie-banner/screengrab.jpg" width="600" /></div></div></div></div>
+  <![endif]-->
+  <!-- //Old IE banner -->
+
+  <!-- Header banner -->
+  <header class="header container container--wide container--light" role="banner">
+    <div class="container">
+      <div class="flag">
+        <div class="flag__img">
+          {{> centre-brand}}
+        </div>
+        <div class="flag__body">
+          <div class="header__nav txt-right txt-family-open-sans">
+            <a href="login" class="header__nav__single inline-block islet-ends islet-left">Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- //Header banner -->
+
+  <!-- Main content -->
+  <main id="main" class="main container-non-palm container-non-palm--narrow" role="main">
+    {{{body}}}
+  </main>
+  <!-- //Main content -->
+
+  <!-- Footer -->
+  <footer class="footer container container--wide container--dark" role="contentinfo">
+
+    <!-- Branding, Centre name, and social follow links -->
+    <div class="container island-ends">
+      <div class="flag flag--off-palm">
+
+        <!-- Branding and Centre name -->
+        <div class="flag__img">
+          {{> centre-brand}}
+        </div>
+        <!-- //Branding and Centre name -->
+
+        <!-- Social follow links -->
+        <div class="flag__body">
+          <ul class="footer__social horiz-list horiz-list--gutter-half">
+            <li>
+              <a href="http://www.facebook.com/westfieldmiranda" target="_blank" rel="external">
+                <span class="hide-visually">Follow us on Facebook</span>
+                <span class="icon icon-facebook icon--lrger icon--flush-top" aria-hidden="true"></span>
+              </a>
+            </li><!--
+            --><li>
+              <a href="http://twitter.com/westfieldau" target="_blank" rel="external">
+                <span class="hide-visually">Follow us on Twitter</span>
+                <span class="icon icon-twitter icon--lrger icon--flush-top" aria-hidden="true"></span>
+              </a>
+            </li><!--
+            --><li>
+              <a href="http://instagram.com/westfieldmiranda" target="_blank" rel="external">
+                <span class="hide-visually">Follow us on Instagram</span>
+                <span class="icon icon-instagram icon--lrger icon--flush-top" aria-hidden="true"></span>
+              </a>
+            </li><!--
+            --><li>
+              <a href="http://pinterest.com/westfieldau" target="_blank" rel="external">
+                <span class="hide-visually">Follow us on Pinterest</span>
+                <span class="icon icon-pinterest icon--lrger icon--flush-top" aria-hidden="true"></span>
+              </a>
+            </li><!--
+            --><li>
+              <a href="http://www.youtube.com/westfieldfashion" target="_blank" rel="external">
+                <span class="hide-visually">Follow us on Youtube</span>
+                <span class="icon icon-youtube icon--lrger icon--flush-top" aria-hidden="true"></span>
+              </a>
+            </li><!--
+            --><li>
+              <a href="http://plus.google.com/116705982116614986647/posts" target="_blank" rel="external">
+                <span class="hide-visually">Follow us on Google Plus</span>
+                <span class="icon icon-google-plus icon--lrger icon--flush-top" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- //Social follow links -->
+
+      </div>
+    </div>
+    <!-- //Branding, Centre name, and social follow links -->
+
+    <!-- T&C's -->
+    <div class="footer__legal footer__legal--terms container container--wide container--dark-less">
+      <div class="container">
+        <a href="http://www.westfield.com.au/terms-conditions" class="islet-ends" rel="external" target="_blank">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <!-- //T&C's -->
+
+    <!-- Copyright statement -->
+    <div class="footer__legal footer__legal--copyright container islet-ends txt-sml">
+      <!-- BACKEND DEV: make year dynamic -->
+      <small class="txt-reset">&copy; Scentre Group 2014</small>
+    </div>
+    <!-- //Copyright statement -->
+
+  </footer>
+
+  <!-- Global JavaScript -->
+  <!-- <script src="js/script.js"></script> -->
+  <!-- //Global JavaScript -->
+
+</body>
+
+</html>

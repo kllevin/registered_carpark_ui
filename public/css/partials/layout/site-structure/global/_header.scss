@@ -2,7 +2,18 @@
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
    ====================================================================================== */
 
-  .header {
-    background-color: $color-white;
-    color: $color-black;
+.header {
+  color: $color-black;
+
+  a:hover,
+  a:focus {opacity: 0.8;}
+}
+
+  /* Nav */
+  .header__nav {
+    &,
+    a {color: $color-grey-med;}
   }
+
+    /* Single link */
+    .header__nav__single {border-left: 1px solid $color-grey-light;}
