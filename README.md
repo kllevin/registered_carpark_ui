@@ -8,7 +8,7 @@ The build is using a simple Node server to put our files together and give us th
 
 - All the UI lives in the `views` folder, the breakdown is:
   - `layout` folder houses the master templates with the main template being `main.handlebars`.
-  - `partials` folder houses any shared markup to keep things DRY.
+  - `partials` folder houses any shared markup to keep things DRY and are referenced like this: `{{> centre-brand}}`.
   - the rest are the specific pages of the app, with some being in their own folders to keep things more organised e.g. **Registration**.
 - All assets (CSS, JS, images) live in the `public` folder however the `public` folder is only needed for the Node server setup, they actually resolve to the root e.g. `/css/style.css`.
 - The three favicons need to remain in the root of the project and on the server. These files are:
@@ -37,7 +37,7 @@ To compile Sass run `sass --watch style.scss:style.css --style compressed` in th
 
 Please don't modify any of the HTML/CSS, if you're missing anything or if anything doesn't work for you then please come back to us and we'll work together on it. This is important because we need to make sure we're adhering to best practices, maintain the responsive UI, and our Accessibility guidelines.
 
-If you absolutely must write CSS, please add your changes to the `third-party.scss` partial located in `public/css/partials/third-party/` and we'll review it at the end. **N.B. do not modify any of the other CSS files as they'll be constantly changing throughout the build**.
+If you absolutely must write CSS, please create a new stylesheet and call it **after** `style.css` and we'll review it at the end. **N.B. do not modify any of the other CSS files as they'll be constantly changing throughout the build**.
 
 Any important notes for you are in the form of HTML comments prefixed with **BACKEND DEV** e.g.
 
