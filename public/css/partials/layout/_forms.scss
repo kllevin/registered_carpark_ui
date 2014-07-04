@@ -1,0 +1,15 @@
+/* ======================================================================================
+   @LAYOUT -> FORMS
+   ====================================================================================== */
+
+/*
+  Usage: these form layout styles provide the default form layout which is linear i.e. `label` above `input`. As always major layout is handled by the grid e.g. columns.
+*/
+
+/* Label */
+.form-field__lbl {
+  color: $color-grey-med;
+
+  /* Focused state */
+  .is-focused & {color: $color-black;}
+}

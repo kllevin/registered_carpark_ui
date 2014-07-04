@@ -11,23 +11,17 @@
 /* Error */
 .is-input-error {
 	border-color: $color-feedback-error !important;
-	background: lighten($color-feedback-error, 42%) !important;
+	background: lighten($color-feedback-error, 45%) !important;
 	color: $color-feedback-error !important;
 
-	&:focus {
-    border-color: $color-feedback-error !important;
-    box-shadow: 0 0 0 1px $color-feedback-error !important;
-  }
+	&:focus {border-color: $color-feedback-error !important;}
 }
 
 /* Success */
 .is-input-success {
 	border-color: $color-feedback-success !important;
-	background: lighten($color-feedback-success, 62%) !important;
+	background: lighten($color-feedback-success, 45%) !important;
 	color: $color-feedback-success !important;
 
-	&:focus {
-    border-color: $color-feedback-success !important;
-    box-shadow: 0 0 0 1px $color-feedback-success !important;
-  }
+	&:focus {border-color: $color-feedback-success !important;}
 }

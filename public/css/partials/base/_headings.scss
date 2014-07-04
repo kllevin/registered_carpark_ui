@@ -3,13 +3,20 @@
    ====================================================================================== */
 
 /* H1 */
-h1, .h1 {
+h1, .h1,
+h2, .h2 {
   font-family: $font-family-lato;
   font-weight: $font-family-lato-weight;
 }
 
 /* H2 */
-h2, .h2 {
+h2, .h2 {margin-bottom: 0;}
+
+/* H3 - H4 */
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   font-family: $font-family-opensans;
   font-weight: $font-family-opensans-weight;
 }

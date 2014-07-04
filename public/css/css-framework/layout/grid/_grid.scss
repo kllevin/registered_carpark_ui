@@ -36,6 +36,8 @@
 	.grid,
 	.grid__item {
 		@extend %bottom-spacing;
+		/* Apply this so grid can be used on `span`s */
+		display: block;
 
 		/* Turn off bottom margin at this breakpoint (non-linearised) and only for 'screen' media so as not to affect 'print' media */
 		@include respond-min($non-palm, $screen-only: true) {

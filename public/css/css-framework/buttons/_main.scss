@@ -6,7 +6,7 @@
   The main buttons for the site.
 
   .btn--main-dark         - Dark
-  .btn--main-dark         - Compact
+  .btn--main-compact      - Compact
 
   Styleguide Button Main
 */
@@ -15,19 +15,15 @@
   line-height: normal;
   @include to-em(padding, $spacing-half $spacing-base);
   border-radius: $border-radius;
+  color: $color-white;
 
   /* Bg colour combined with disabled state */
   &,
   &[disabled].btn,
   &.is-disabled.btn {background-color: $color-btn-primary;}
 
-  &,
-  &:visited,
   &:hover,
-  &:focus {color: $color-white;}
-
-  &:hover,
-  &:focus {background-color: lighten($color-btn-primary, 10%);}
+  &:focus {opacity: 0.8;}
 }
 
 /* Modifier: dark colour */
@@ -35,9 +31,6 @@
 	&,
 	&[disabled].btn,
 	&.is-disabled.btn {background-color: $color-btn-secondary;}
-
-	&:hover,
-	&:focus {background-color: lighten($color-btn-secondary, 10%);}
 }
 
 /* Modifier: compact */

@@ -2,4 +2,8 @@
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> MAIN
    ====================================================================================== */
 
-.main {@include to-rem(padding-top padding-bottom, $spacing-dbl);}
+.main {
+  background-color: $color-grey-light;
+  @include to-rem(padding-top, $spacing-base);
+  @include to-rem(padding-bottom, $spacing-dbl);
+}

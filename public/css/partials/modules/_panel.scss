@@ -1,0 +1,52 @@
+/* ======================================================================================
+   @MODULES -> PANEL
+   ====================================================================================== */
+
+/*
+  Panel is the main module that lives in the main content area.
+*/
+
+.panel {background-color: $color-white;}
+
+/* Modifier: unfocused */
+.panel--unfocused {background-color: $color-grey-lighter;}
+
+  /* Header */
+  .panel__hdr {
+    background-color: $color-grey-dark;
+    color: $color-white;
+    /* This is needed as sometimes the header is a `legend` */
+    width: 100%;
+
+    /* Modifier: unfocused */
+    .panel--unfocused & {
+      background: transparent;
+      color: $color-grey-med;
+    }
+  }
+
+    /* The title */
+    .panel__hdr__title {line-height: 1.5;}
+
+      /* The title circular number */
+      .panel__hdr__title__no {
+        border-radius: 100%;
+        border: 1px solid $color-white;
+        @include to-rem(width height, 30);
+        @include to-rem(margin-right, $spacing-third);
+        @include to-rem(padding-top, 3);
+
+        /* Modifier: unfocused */
+        .panel--unfocused & {border-color: $color-grey-med-light;}
+
+        /* Modifier: complete */
+        .panel--complete & {
+          border: 0;
+          color: $color-white;
+          background-color: $color-btn-primary;
+          @include to-rem(padding-top, 3);
+        }
+      }
+
+      /* Meta information */
+      .panel__hdr__meta {color: $color-grey-med-light;}

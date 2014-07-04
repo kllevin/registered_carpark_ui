@@ -2,12 +2,7 @@
    @LAYOUT -> SITE STRUCTURE -> GLOBAL -> HEADER
    ====================================================================================== */
 
-.header {
-  color: $color-black;
-
-  a:hover,
-  a:focus {opacity: 0.8;}
-}
+.header {color: $color-black;}
 
   /* Nav */
   .header__nav {

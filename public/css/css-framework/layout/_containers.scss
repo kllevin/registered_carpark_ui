@@ -3,7 +3,7 @@
    ====================================================================================== */
 
 .container,
-.container--palm {
+.container-palm {
   width: $page-container-width;
   @include to-rem(min-width, $page-container-min-width);
   @include to-rem(max-width, $page-container-max-width);
@@ -18,7 +18,7 @@
 /* Modifier: turn off container at non-palm */
 @include respond-min($non-palm) {
   .container--off-non-palm,
-  .container--palm {
+  .container-palm {
     width: auto;
     max-width: none;
     min-width: 0;

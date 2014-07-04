@@ -2,4 +2,10 @@
    @BASE -> MAIN
    ====================================================================================== */
 
-body {background-color: $color-grey-lighter;}
+body {
+  background-color: $color-black;
+
+  @include respond-min($non-palm) {
+    background-color: $color-grey-dark;
+  }
+}

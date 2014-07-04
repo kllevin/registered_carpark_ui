@@ -42,3 +42,29 @@ If you absolutely must write CSS, please create a new stylesheet and call it **a
 Any important notes for you are in the form of HTML comments prefixed with **BACKEND DEV** e.g.
 
     <!-- BACKEND DEV: make year dynamic -->
+
+### Form Validation Rules
+
+Form validation rules after form submit, this all needs to happen server side (i.e. on a post back) not with JavaScript:
+
+- Append `aria-invalid="true"` attribute to the input(s) that fail validation, when the input(s) pass validation remove the attribute(s). Example:
+
+    <input type="text" id="firstName" class="txt-input" aria-required="true" required aria-invalid="true">
+- Append `is-input-error` class to the input(s) that fail validation, when the input(s) pass validation remove the class(es). Example:
+    <input type="text" id="firstName" class="txt-input is-input-error" aria-required="true" required aria-invalid="true">
+- Inject the error message(s) directly after it's input(s) that fail validation, when the error message(s) pass validation remove them from the HTML source. Example:
+
+    <input type="text" id="firstName" class="txt-input" aria-required="true" required>
+    <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error">Please enter your first name</p>
+
+All the errors have been included for each form but they're commented out however the copy is not final, Abdul Ghani will provide the finalised copy in a spreadsheet.
+
+Other rules:
+  - The first error message needs to be focused too when the page has refreshed i.e. form has been submitted, either by it's `id` or use `tabindex="-1"`.
+  - Only one error can ever be shown.
+  - Each error needs to be connected to it's input via the attributes: `id` and `aria-describedby`, Example:
+
+    <input type="text" id="firstName" class="txt-input" aria-required="true" required aria-describedby="form-error-1">
+    <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your first name</p>
+
+    I've hardcoded each `id` to each error, the application is: `id="form-error-x"` where **x** is a number according to where it is in the order e.g. for the third error the `id` will be `id="form-error-3"`.

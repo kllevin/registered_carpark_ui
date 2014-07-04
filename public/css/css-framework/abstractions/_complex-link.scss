@@ -18,7 +18,7 @@
 	@extend %disguised-link;
 
 	&:hover .complex-link__target,
-	&:focus .complex-link__target {color: $color-link-hover;}
+	&:focus .complex-link__target {opacity: 0.8;}
 }
 
 	.complex-link__target {

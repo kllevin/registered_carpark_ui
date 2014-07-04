@@ -3,13 +3,8 @@
    ====================================================================================== */
 
 .footer {
-  background-color: $color-black;
-
   &,
   a {color: $color-white;}
-
-  a:hover,
-  a:focus {opacity: 0.8;}
 }
 
   /* Shared */
@@ -44,5 +39,6 @@
 
   /* Modifier: copyright */
   @include respond-min($non-palm) {
-    .footer__legal--copyright {@include to-rem(margin-top, -41);}
+    /* This needs to equal the height of `.footer__legal--terms` */
+    .footer__legal--copyright {@include to-rem(margin-top, -42);}
   }

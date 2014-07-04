@@ -25,8 +25,17 @@
       - WIDGETS ............more interactive rich requiring JavaScript/jQuery.
     - HELPERS...............a bunch of classes to apply very common styles.
     - PRINT.................global print styles (rest of print styles live inline).
-    - Third-party.................home for styles added by third parties and for housing nasty, hacky, quick-fix CSS, see: http://csswizardry.com/2013/04/shame-css/.
+  - Third-party.............home for styles added by third parties and for housing nasty, hacky, quick-fix CSS, see: http://csswizardry.com/2013/04/shame-css/.
 */
+
+/* [PROJECT-SPECIFIC VARIABLES]
+-------------------------------------------------------*/
+
+/*
+  Note: must be declared first in order to be used in the 'Framework Overrides' section below.
+ */
+
+@import "partials/utils/vars";
 
 /* [OVERRIDES]
 -------------------------------------------------------*/
@@ -35,39 +44,7 @@
   Note: any variables you find set in css-framework’ '_vars.scss' that you do not wish to keep, simply redefine here. This means that if css-framework, for example, sets your `$font-size` at `14px` and you wish it to be `16px`, simply redeclare it here, see example below. css-framework ignores its own variables in favour of using your own, so you can completely modify how css-framework works without ever having to alter the framework itself. Just make sure to declare your overrides here and do not use the `!default` keyword.
 */
 
-/* Grid/Layout */
-
-/* Page container min width */
-$page-container-min-width: 280 !default;
-
-/* Page container max width */
-$page-container-max-width: 1200 !default;
-
-/* Greys */
-
-/* Dark */
-$color-grey-dark: #29292b;
-
-/* Light */
-$color-grey-light: #e8e8e8;
-
-/* Text */
-
-/* Base */
-$color-txt-base: #000;
-
-/* Link colours */
-$color-link: #256e9e !default;
-
-/* Feedback colours */
-
-/* Error */
-$color-feedback-error: #da291c !default;
-
-/* Specific breakpoint classes */
-
-/* Width classes - mainly used with the grid */
-$width-classes-at-breakpoint-non-palm: true;
+@import "overrides";
 
 /* [IMPORT THE FRAMEWORK]
 -------------------------------------------------------*/
@@ -94,6 +71,7 @@ $width-classes-at-breakpoint-non-palm: true;
 
 /* Modules */
 @import "css-framework/modules/icon";
+@import "css-framework/modules/feedback";
 
 /* Helpers */
 @import "css-framework/imports/helpers";
@@ -108,16 +86,17 @@ $width-classes-at-breakpoint-non-palm: true;
   Note: see recommended partial directory structure above.
 */
 
-/* Utils */
-@import "partials/utils/vars";
-
 /* Base */
 @import "partials/base/fonts";
 @import "partials/base/headings";
 @import "partials/base/main";
 
+/* Buttons */
+@import "partials/buttons/main";
+
 /* Layout */
 @import "partials/layout/containers";
+@import "partials/layout/forms";
 
   /* Layout -> Site Structure -> Global */
   @import "partials/layout/site-structure/global/centre-brand";
@@ -128,9 +107,8 @@ $width-classes-at-breakpoint-non-palm: true;
 
 /* Modules */
 @import "partials/modules/icon";
+@import "partials/modules/intro";
+@import "partials/modules/panel";
 
 /* Helpers */
 @import "partials/helpers/text";
-
-/* Third-party */
-@import "partials/third-party/third-party";

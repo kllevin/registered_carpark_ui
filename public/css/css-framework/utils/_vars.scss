@@ -217,10 +217,8 @@ $color-btn-primary: #52c884 !default;
 /* Secondary */
 $color-btn-secondary: #256e9e !default;
 
-/* Link colours */
+/* Link colour */
 $color-link: $color-btn-primary !default;
-
-$color-link-hover: darken($color-link, 10%) !default;
 
 /* Feedback colours */
 
@@ -235,6 +233,23 @@ $color-feedback-warning: orange !default;
 
 /* Info */
 $color-feedback-info: blue !default;
+
+/* Divider border colour */
+$color-divider-border: $color-grey-med !default;
+
+/* Forms */
+
+/* Input text */
+$color-input-txt: $color-txt-base !default;
+
+/* Input border */
+$color-input-border: $color-grey-med !default;
+
+/* Input bg */
+$color-input-bg: $color-white !default;
+
+/* Input focus colour */
+$color-input-focus: $color-brand !default;
 
 /* [FORM FEATURES]
 -------------------------------------------------------*/
