@@ -3045,6 +3045,11 @@ th {
   }
 }
 
+/* Modifier: center align */
+.flag--align-center {
+  margin: 0 auto;
+}
+
 /* Modifier: shrink wrap */
 .flag--shrink-wrap {
   width: auto;
