@@ -47,7 +47,7 @@ textarea[disabled],
   */
   .txt-input,
   textarea,
-  .no-touch select {
+  select {
     color: $color-input-txt;
     border-radius: $border-radius;
     border: 1px solid $color-input-border;
@@ -58,16 +58,51 @@ textarea[disabled],
   }
 
   .txt-input,
-  textarea {
+  textarea,
+  select {
     @include to-rem(padding, $spacing-half);
 
     &:focus {outline: none;}
   }
 
+  /* Remove top inner shadow from iOS devices */
+  .ios {
+    .txt-input,
+    textarea {-webkit-appearance: caret;}
+  }
+
   textarea {resize: vertical;}
 
-  /* Select list (only for non-touch) */
-  .no-touch select {@include to-rem(padding, $spacing-third);}
+  /* Fancy select */
+  .select-fancy {
+    width: 100%;
+
+    select {
+      @include to-rem(padding-bottom, $spacing-half - 1);
+
+      /* IE 9 */
+      .ie-9 & {@include to-rem(padding-bottom, $spacing-half - 2);}
+    }
+
+    /* Apply the bling only for Webkit */
+    @include target-webkit {
+      position: relative;
+
+      &:after {
+        pointer-events: none;
+        content: "\25BC";
+        position: absolute;
+        height: 1em;
+        font-size: .625em;
+        line-height: 1;
+        right: 1.2em;
+        top: 50%; 
+        @include translateY(-50%);
+      }
+
+      select {-webkit-appearance: none;}
+    }
+  }
 
   /* Modifiers: alternate widths */
 

@@ -35,32 +35,33 @@
 
 /* Heading - `legend` */
 .form-hdr {
-	/* Add default spacing via `padding` so it works cross browser */
-	@include to-rem(padding-bottom, $spacing-base);
-	margin-bottom: 0;
+  /* Add default spacing via `padding` so it works cross browser */
+  @include to-rem(padding-bottom, $spacing-base);
+  margin-bottom: 0;
 }
 
 /* Form field */
 .form-field {
-	@extend %clear-fix;
+  @extend %clear-fix;
 
-	/* Resets */
-	p {margin-bottom: 0;}
+  /* Resets */
+  p {margin-bottom: 0;}
 
-	/* Make all text inputs full width */
-	.txt-input,
-  textarea {width: 100%;}
+  /* Make all text inputs full width */
+  .txt-input,
+  textarea,
+  select {width: 100%;}
 }
 
   /* Shared */
   .form-field__lbl,
   .form-field__msg {color: $color-txt-dark;}
 
-	/* Label */
-	.form-field__lbl {@include to-rem(margin-bottom, $spacing-sixth);}
+  /* Label */
+  .form-field__lbl {@include to-rem(margin-bottom, $spacing-sixth);}
 
-	/* Messages */
-	.form-field__msg {
-		@include font-size($font-size-smler, 1.5);
+  /* Messages */
+  .form-field__msg {
+    @include font-size($font-size-smler, 1.5);
     margin-top: to-rem($spacing-micro);
-	}
+  }
