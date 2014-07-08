@@ -52,11 +52,12 @@
   textarea {width: 100%;}
 }
 
+  /* Shared */
+  .form-field__lbl,
+  .form-field__msg {color: $color-txt-dark;}
+
 	/* Label */
-	.form-field__lbl {
-		@include to-rem(margin-bottom, $spacing-sixth);
-		color: $color-txt-dark;
-	}
+	.form-field__lbl {@include to-rem(margin-bottom, $spacing-sixth);}
 
 	/* Messages */
 	.form-field__msg {
