@@ -62,21 +62,21 @@ if (isiPhone) {
     var method;
     var noop = function () {};
     var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeStamp', 'trace', 'warn'
+      'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+      'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+      'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+      'timeStamp', 'trace', 'warn'
     ];
     var length = methods.length;
     var console = (window.console = window.console || {});
 
     while (length--) {
-        method = methods[length];
+      method = methods[length];
 
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
+      // Only stub undefined methods.
+      if (!console[method]) {
+          console[method] = noop;
+      }
     }
 }());
 
@@ -88,15 +88,14 @@ if (isiPhone) {
 $(function() {
 
 	/**
-	 * Apply a style hook to each form field module when their inputs are focused
+	 * Apply a style hook to each form field label when their inputs are focused
 	 */
-	var inputContainer = '.form-field';
+  var formLabelFocusHighlight = '.js-form-label-focus';
 
-	$(inputContainer).on('focus blur', 'input, select', function() {
+	$(formLabelFocusHighlight).on('focus blur', 'input, select', function() {
 	  var input = $(this);
-	  //debugger;
 	  setTimeout(function() {
-	  	input.closest(inputContainer).toggleClass('is-focused', input.is(':focus'));
+	  	input.closest(formLabelFocusHighlight).toggleClass('is-focused', input.is(':focus'));
 	  }, 0 );
 	});
 
