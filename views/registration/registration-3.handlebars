@@ -1,0 +1,261 @@
+<!-- Intro -->
+<div class="intro mrg-base txt-center">
+  <h2>Sign Up For Express Parking</h2>
+</div>
+<!-- //Intro -->
+
+<!-- Main -->
+<ol>
+
+  <!-- Step 1 -->
+  <li class="panel panel--unfocused panel--complete divider divider--btm">
+    <div class="panel__hdr islet-ends">
+      <div class="container">
+        <div class="panel__hdr__title txt-family-open-sans">
+          <span class="hide-visually">Completed step. </span>
+          <span class="panel__hdr__title__no txt-center inline-block">1</span>
+          <span class="hide-visually">Personal Details </span>
+          Hi John!
+        </div>
+      </div>
+    </div>
+  </li>
+  <!-- //Step 1 -->
+
+  <!-- Step 2 -->
+  <li class="panel panel--unfocused panel--complete divider divider--btm">
+    <div class="panel__hdr islet-ends">
+      <div class="container">
+        <div class="panel__hdr__title txt-family-open-sans">
+          <span class="hide-visually">Completed step. </span>
+          <span class="panel__hdr__title__no txt-center inline-block">2</span>
+          <span class="hide-visually">Vehicle Information </span>
+          Nice wheeels!
+        </div>
+      </div>
+    </div>
+  </li>
+  <!-- //Step 2 -->
+
+  <!-- Step 3 -->
+  <li class="panel divider divider--btm">
+
+    <!--
+      BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+    -->
+
+    <form action="" method="" name="" novalidate>
+      <fieldset>
+
+        <!-- Legend -->
+        <legend class="panel__hdr islet-ends">
+          <span class="container block">
+            <span class="panel__hdr__title txt-family-open-sans block">
+              <span class="hide-visually">Step. </span>
+              <span class="panel__hdr__title__no txt-center inline-block">3</span>
+              Payment Details
+            </span>
+          </span>
+        </legend>
+        <!-- //Legend -->
+
+        <!-- Form fields -->
+        <div class="panel__main">
+          <div class="divider divider--btm">
+            <div class="container island-top islet-btm">
+
+              <!-- Form row -->
+              <div class="grid grid--flush">
+
+                <!-- Pre Paid Amount -->
+                <div class="grid__item non-palm-one-half">
+                  <div class="form-field mrg-base js-form-label-focus">
+                    <label class="form-field__lbl block" for="prepaidAmount">
+                      Select Pre Paid amount
+                      <strong class="req-field" title="Required">*</strong>
+                    </label>
+                    <span class="select-fancy inline-block">
+                      <select id="prepaidAmount" aria-required="true" required>
+                        <option selected>Select amount&hellip;</option>
+                        <option>$20</option>
+                        <option>$50</option>
+                        <option>$80</option>
+                        <option>$100</option>
+                      </select>
+                    </span>
+                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please choose a pre paid amount</p> -->
+                  </div>
+                </div>
+                <!-- //Pre Paid Amount -->
+
+                <!-- Card Number -->
+                <div class="grid__item non-palm-one-half">
+                  <div class="form-field mrg-base js-form-label-focus">
+                    <label class="form-field__lbl block" for="cardNumber">
+                      <span class="grid grid--flush grid--gutter-half">
+                        <span class="grid__item one-half">
+                          Card Number
+                          <strong class="req-field" title="Required">*</strong>
+                        </span>
+                        <span class="grid__item one-half">
+                          [icons]
+                        </span>
+                      </span>
+                    </label>
+                    <input type="text" id="cardNumber" class="txt-input" autocomplete="off" maxlength="17" aria-required="true" required>
+                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter your card number</p> -->
+                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter a valid credit card number</p> -->
+                  </div>
+                </div>
+                <!-- //Card Number -->
+
+              </div>
+              <!-- //Form row -->
+
+              <!-- Form row -->
+              <div class="grid grid--flush">
+
+                <!-- Expiry -->
+                <div class="grid__item non-palm-one-half mrg-base js-form-label-focus">
+                  <div class="form-field__lbl" aria-hidden="true">
+                    Expiry
+                    <strong class="req-field" title="Required">*</strong>
+                  </div>
+                  <div class="grid grid--flush">
+                    <!-- Expiry month -->
+                    <div class="grid__item one-half">
+                      <div class="form-field">
+                        <label class="hide-visually" for="expiryMonth">
+                          Expiry month
+                          <strong class="req-field" title="Required">*</strong>
+                        </label>
+                        <span class="select-fancy inline-block">
+                          <select id="expiryMonth" aria-required="true" required>
+                            <option selected>Month</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                          </select>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- //Expiry month -->
+                    <!-- Expiry year -->
+                    <div class="grid__item one-half">
+                      <div class="form-field">
+                        <label class="hide-visually" for="expiryMonth">
+                          Expiry year
+                          <strong class="req-field" title="Required">*</strong>
+                        </label>
+                        <span class="select-fancy inline-block">
+                          <select id="expiryMonth" aria-required="true" required>
+                            <option selected>Year</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                          </select>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- //Expiry year -->
+                  </div>
+                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-4">Please enter your expiry date</p> -->
+                </div>
+                <!-- //Expiry -->
+
+                <!-- Name on Card -->
+                <div class="grid__item non-palm-one-half">
+                  <div class="form-field mrg-base js-form-label-focus">
+                    <label class="form-field__lbl block" for="nameOnCard">
+                      Name on Card
+                      <strong class="req-field" title="Required">*</strong>
+                    </label>
+                    <input type="text" id="nameOnCard" class="txt-input" aria-required="true" required>
+                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter the name on your card</p> -->
+                  </div>
+                </div>
+                <!-- //Name on Card -->
+
+              </div>
+              <!-- //Form row -->
+
+              <!-- Form row -->
+              <div class="grid grid--flush">
+
+                <!-- CCV -->
+                <div class="grid__item non-palm-one-half mrg-base">
+                  <div class="grid grid--flush">
+                    <div class="grid__item one-half">
+                      <div class="form-field js-form-label-focus">
+                        <label class="form-field__lbl block" for="ccv">
+                          <span class="grid grid--flush grid--gutter-half">
+                            <span class="grid__item one-third">
+                              CCV
+                              <strong class="req-field" title="Required">*</strong>
+                            </span>
+                            <span class="grid__item two-thirds">
+                              [icon]
+                            </span>
+                          </span>
+                        </label>
+                        <input type="text" id="ccv" class="txt-input" autocomplete="off" maxlength="4" aria-required="true" required>
+                      </div>
+                    </div>
+                    <div class="grid__item one-half"></div>
+                  </div>
+                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-6">Please enter your CCV number</p> -->
+                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-7">Please enter a valid CCV number</p> -->
+                </div>
+                <!-- //CCV -->
+
+              </div>
+              <!-- //Form row -->
+
+            </div>
+          </div>
+
+          <!-- Form submit -->
+          <div class="container island-ends txt-center">
+            <button type="submit" class="btn btn--main">Next Step</button>
+          </div>
+          <!-- //Form submit -->
+
+        </div>
+        <!-- //Form fields -->
+
+      </fieldset>
+    </form>
+  </li>
+  <!-- //Step 3 -->
+
+  <!-- Step 4 -->
+  <li class="panel panel--unfocused divider divider--btm">
+    <div class="panel__hdr islet-ends">
+      <div class="container">
+        <div class="panel__hdr__title txt-family-open-sans">
+          <span class="hide-visually">Next step. </span>
+          <span class="panel__hdr__title__no txt-center inline-block">4</span>
+          Complete Registration
+        </div>
+      </div>
+    </div>
+  </li>
+  <!-- //Step 4 -->
+
+</ol>
+<!-- //Main -->
