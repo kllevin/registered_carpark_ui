@@ -6,10 +6,9 @@
   Usage: these form layout styles provide the default form layout which is linear i.e. `label` above `input`. As always major layout is handled by the grid e.g. columns.
 */
 
-/* Label */
-.form-field__lbl {
-  color: $color-grey-med;
+/* Shared */
+.form-field__lbl,
+.form-field__msg {color: $color-grey-med;}
 
-  /* Focused state */
-  .is-focused & {color: $color-black;}
-}
+/* Label focused */
+.is-focused .form-field__lbl {color: $color-black;}

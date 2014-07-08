@@ -171,3 +171,8 @@
 .icon-icon_filterby:before {
   content: "\e00e";
 }
+
+/* Modifiers */
+
+/* Modifier: light grey */
+.icon--color-light:before {color: $color-grey-med-light;}
