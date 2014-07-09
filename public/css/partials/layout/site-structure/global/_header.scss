@@ -4,11 +4,5 @@
 
 .header {color: $color-black;}
 
-  /* Nav */
-  .header__nav {
-    &,
-    a {color: $color-grey-med;}
-  }
-
-    /* Single link */
+    /* Nav Single link */
     .header__nav__single {border-left: 1px solid $color-grey-light;}
