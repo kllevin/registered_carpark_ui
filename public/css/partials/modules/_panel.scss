@@ -19,10 +19,7 @@
     width: 100%;
 
     /* Modifier: unfocused */
-    .panel--unfocused & {
-      background: transparent;
-      color: $color-grey-med;
-    }
+    .panel--unfocused & {background: transparent;}
   }
 
     /* The title */
