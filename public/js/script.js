@@ -93,6 +93,16 @@ var formLabelFocus = function() {
   });
 }
 
+//Faux label
+var fauxLabelFocus = function() {
+  var fauxLabel = '.js-faux-label';
+  var fauxLabelFocus = '.js-faux-label-focus';
+
+  $(fauxLabel).on('click', function() {
+    $(fauxLabelFocus).find('select, input').eq(0).focus();
+  });
+}
+
 // Highlight relevant credit card image determined by the first number a user types into the credit card number input
 var determineCardType = function() {
 
@@ -142,6 +152,7 @@ var paymentTypeSelection = function() {
 $(function() {
 
   formLabelFocus();
+  fauxLabelFocus();
   determineCardType();
   paymentTypeSelection();
 

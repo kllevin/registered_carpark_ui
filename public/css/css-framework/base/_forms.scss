@@ -3,7 +3,8 @@
    ====================================================================================== */
 
 /* Indicate that `label` will shift focus to the associated `input` element */
-label {cursor: pointer;}
+label,
+.form-field__lbl--faux {cursor: pointer;}
 
 /* Override `content-box` from Normalize for search inputs */
 input[type="search"] {@include prefix(box-sizing, border-box);}
@@ -95,7 +96,7 @@ textarea[disabled],
         pointer-events: none;
         position: absolute;
         @include to-rem(right, $spacing-half);
-        top: 50%; 
+        top: 50%;
         @include translateY(-50%);
         display: block;
       }
