@@ -93,7 +93,7 @@ var formLabelFocus = function() {
   });
 }
 
-//Faux label
+// Focus on first selector or input in the container when clicking a faux label
 var fauxLabelFocus = function() {
   var fauxLabel = '.js-faux-label';
   var fauxLabelContainer = '.js-faux-label-container';
