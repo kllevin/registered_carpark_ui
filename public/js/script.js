@@ -96,10 +96,10 @@ var formLabelFocus = function() {
 //Faux label
 var fauxLabelFocus = function() {
   var fauxLabel = '.js-faux-label';
-  var fauxLabelFocus = '.js-faux-label-focus';
+  var fauxLabelContainer = '.js-faux-label-container';
 
   $(fauxLabel).on('click', function() {
-    $(fauxLabelFocus).find('select, input').eq(0).focus();
+    $(fauxLabelContainer).find('select, input').eq(0).focus();
   });
 }
 
