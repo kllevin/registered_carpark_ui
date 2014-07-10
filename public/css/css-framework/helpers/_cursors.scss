@@ -1,12 +1,11 @@
 /* ======================================================================================
-   @UTILS -> PLACEHOLDERS -> SPRITE BG
+   @HELPERS -> CURSORS
    ====================================================================================== */
 
 /*
-	Declare the main sprite background image.
+	Changes the cursor of an element.
 */
 
-%sprite-bg {
-	background-image: url("../images/sprite.png");
-	background-repeat: no-repeat;
-}
+.cursor-default {cursor: default !important;}
+
+.cursor-pointer {cursor: pointer !important;}

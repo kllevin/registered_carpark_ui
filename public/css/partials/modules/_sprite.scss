@@ -1,0 +1,40 @@
+/* ======================================================================================
+   @MODULES -> SPRITE
+   ====================================================================================== */
+
+/*
+	Applies a background image and nothing else, usually from a sprite.
+*/
+
+/* Set sprites */
+
+/* Modifiers: credit cards */
+.sprite--cards {
+	width: 35px;
+  height: 22px;
+  background-size: 35px 88px;
+
+  /* When used in the 'Forms' layout */
+  .form-field & {@include to-em(margin-top, -2);}
+
+  /* When used with the JavaScript function: `determineCardType()` */
+  &.sprite--cards--animate {@include prefix(transition, all 0.15s ease-out);}
+
+  &.is-invisible {opacity: 0;}
+
+  /* Shift cards over to the right edge when selected */
+  &.is-visible {
+    &.sprite--cards--visa {@include translateX(78px);}
+
+    &.sprite--cards--mc {@include translateX(39px);}
+  }
+}
+
+  /* Modifier: VISA */
+  .sprite--cards--visa {background-position: 0 -44px;}
+
+  /* Modifier: Amex */
+  .sprite--cards--amex {background-position: 0 -22px;}
+
+  /* Modifier: CCV */
+  .sprite--cards--ccv {background-position: 0 -66px;}

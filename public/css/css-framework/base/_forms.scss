@@ -84,22 +84,23 @@ textarea[disabled],
       .ie-9 & {@include to-rem(padding-bottom, $spacing-half - 2);}
     }
 
+    .select-fancy__arrow {display: none;}
+
     /* Apply the bling only for Webkit */
     @include target-webkit {
       position: relative;
 
-      &:after {
+      /* The down arrow - uses an icon font */
+      .select-fancy__arrow {
         pointer-events: none;
-        content: "\25BC";
         position: absolute;
-        height: 1em;
-        font-size: .625em;
-        line-height: 1;
-        right: 1.2em;
+        @include to-rem(right, $spacing-half);
         top: 50%; 
         @include translateY(-50%);
+        display: block;
       }
 
+      /* Remove the default browser styling */
       select {-webkit-appearance: none;}
     }
   }
