@@ -103,28 +103,46 @@
 
   <!-- Step 4 -->
   <li class="panel divider divider--btm">
-    <div class="panel__hdr islet-ends">
-      <div class="container">
-        <div class="panel__hdr__title txt-family-open-sans">
-          <span class="hide-visually">Step. </span>
-          <span class="panel__hdr__title__no txt-center inline-block">4</span>
-          Complete Registration
-        </div>
-      </div>
-    </div>
+    <form action="" method="" name="" novalidate>
+      <fieldset>
 
-    <div class="panel__main">
-      <div class="divider divider--btm">
-        <div class="container island-ends txt-center">
-          <p><strong>Almost Done!</strong> <span class="block">Just review your details above and select the “Finish” button below</span></p>
+        <!-- Legend -->
+        <legend class="panel__hdr islet-ends">
+          <span class="container block">
+            <span class="panel__hdr__title txt-family-open-sans block">
+              <span class="hide-visually">Step. </span>
+              <span class="panel__hdr__title__no txt-center inline-block">4</span>
+              Complete Registration
+            </span>
+          </span>
+        </legend>
+        <!-- //Legend -->
+
+        <!-- Form fields -->
+        <div class="panel__main">
+          <div class="divider divider--btm">
+            <div class="container island-ends txt-center">
+              <p><strong>Almost Done!</strong> <span class="block">Just review your details above and select the “Finish” button below</span></p>
+              <div class="form-field js-form-label-focus">
+                <input type="checkbox" id="emailCheckbox" checked>
+                <label class="form-field__lbl" for="emailCheckbox">I would like to recieve emails about deals news and events at Westfield.</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form submit -->
+          <div class="container island-ends txt-center">
+            <button type="submit" class="btn btn--main">Finish</button>
+            <!-- BACKEND DEV: Link to the terms & conditions -->
+            <small class="txt-sml txt-grey-med block mrg-base-top">By selecting "Finish" you hereby accept our <a href="#">Terms &amp; Conditions</a></small>
+          </div>
+          <!-- //Form submit -->
+
         </div>
-      </div>
-      <div class="container island-ends txt-center">
-        <button type="submit" class="btn btn--main">Finish</button>
-        <!-- BACKEND DEV: Link to the terms & conditions -->
-        <small class="txt-sml txt-grey-med block mrg-base-top">By selecting "Finish" you hereby accept our <a href="#">Terms &amp; Conditions</a></small>
-      </div>
-    </div>
+        <!-- //Form fields -->
+
+      </fieldset>
+    </form>
   </li>
   <!-- //Step 4 -->
 
