@@ -8,6 +8,10 @@
     "node": ">=0.10.29"
   },
   "dependencies": {
-    "express": "4.4.4"
+    "express": "4.4.4",
+    "grunt": "0.4"
+  },
+  "devDependencies": {
+    "grunt-shell": "^0.7.0"
   }
 }

@@ -3,22 +3,24 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    handlebars: {
-      compile: {
-        options: {
-          namespace: "JST"
-        },
-        files: {
-          "path/to/result.js": "path/to/source.hbs",
-          "path/to/another.js": ["path/to/sources/*.hbs", "path/to/more/*.hbs"]
+    shell: {
+      build: {
+        command:[
+          'curl http://localhost:4000/registration/registration-3 > static/registration/registration-3.html',
+          'curl http://localhost:4000/registration/registration-2 > static/registration/registration-2.html'
+        ].join('&&')
+      },
+      smart: {
+        command: function(path) {
+          return 'curl http://localhost:4000/' + path + ' > static/' + path + '.html';
         }
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-handlebars');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['shell:build']);
 
 };
