@@ -139,9 +139,51 @@ var determineCardType = function() {
 // Payment type selection for Registration 3
 var paymentTypeSelection = function() {
 
-  var hideByDefault = $('.js-payment-type-hide-default');
+  // Hide elements on page load
+  var hideByDefault = $('.js-payment-type-default-hide');
 
+  // Radio inputs
+  var inputPrepaid = $('.js-payment-type-prepaid-input');
+  var inputPayPerVisit = $('.js-payment-type-pay-per-visit-input');
+  var inputPayStation = $('.js-payment-type-paystation-input');
+
+  // Hide/show elements based on the above radio inputs
+  var hidePayPerVisit = $('.js-payment-type-pay-per-visit-show');
+  var hidePrepaid = $('.js-payment-type-prepaid-hide');
+  var hidePayStation = $('.js-payment-type-paystation-hide');
+  var showPayStation = $('.js-payment-type-paystation-show');
+
+  // Misc
+  var miscPaymentTypeGridItem = $('.js-payment-type-grid-item-full');
+
+  // Hide by default
   hideByDefault.hide();
+
+  // Prepaid radio
+  inputPrepaid.change(function() {
+    showPayStation.hide();
+    hidePayStation.show();
+    hidePrepaid.show();
+    hidePayPerVisit.hide();
+    // Make the grid item half width to balance the grid rows
+    miscPaymentTypeGridItem.removeClass('one-whole').addClass('non-palm-one-half');
+  });
+
+  // Pay per visit radio
+  inputPayPerVisit.change(function() {
+    hidePayPerVisit.show();
+    hidePrepaid.hide();
+    hidePayStation.show();
+    showPayStation.hide();
+    // Make the grid item full width to balance the grid rows
+    miscPaymentTypeGridItem.addClass('one-whole').removeClass('non-palm-one-half');
+  });
+
+  // Paystation radio
+  inputPayStation.change(function() {
+    showPayStation.show();
+    hidePayStation.hide();
+  });
 
 }
 

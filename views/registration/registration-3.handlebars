@@ -105,31 +105,33 @@
                 <ul class="horiz-list horiz-list--gutter-base mrg-base">
                   <li>
                     <label for="prepaid" class="block">Prepaid</label>
-                    <input type="radio" id="prepaid" class="js-payment-type-input-prepaid" name="payment-type" checked>
+                    <input type="radio" id="prepaid" class="js-payment-type-prepaid-input" name="payment-type" checked>
                   </li>
                   <li>
                     <label for="pay-per-visit" class="block">Pay Per Visit</label>
-                    <input type="radio" id="pay-per-visit" class="js-payment-type-input-pay-per-visit" name="payment-type">
+                    <input type="radio" id="pay-per-visit" class="js-payment-type-pay-per-visit-input" name="payment-type">
                   </li>
                   <li>
                     <label for="paystation" class="block">Paystation</label>
-                    <input type="radio" id="paystation" class="js-payment-type-input-paystation" name="payment-type">
+                    <input type="radio" id="paystation" class="js-payment-type-paystation-input" name="payment-type">
                   </li>
                 </ul>
-                <p class="flush-btm"><small class="txt-sml">We'll deduct the prepaid amount from your account when it's below $10.</small></p>
-                <p class="flush-btm js-payment-type-hide-default js-payment-type-content-pay-per-visit"><small class="txt-sml">We'll just charge your credit card every time you visit.</small></p>
+                <div class="js-payment-type-paystation-hide">
+                  <p class="flush-btm js-payment-type-prepaid-show js-payment-type-prepaid-hide"><small class="txt-sml">We'll deduct the prepaid amount from your account when it's below $10.</small></p>
+                  <p class="flush-btm js-payment-type-default-hide js-payment-type-pay-per-visit-show"><small class="txt-sml">We'll just charge your credit card every time you visit.</small></p>
+                </div>
               </div>
               <!-- //Choose a payment type -->
 
-              <p class="txt-center flush-btm js-payment-type-hide-default">No credit card needed. Just pay at the paystation when you visit.</p>
+              <p class="txt-center mrg-half js-payment-type-default-hide js-payment-type-paystation-show">No credit card needed. Just pay at the paystation when you visit.</p>
 
-              <div class="js-payment-type-content-paystation">
+              <div class="js-payment-type-paystation-hide">
 
                 <!-- Form row -->
                 <div class="grid grid--flush">
 
                   <!-- Prepaid Amount -->
-                  <div class="grid__item non-palm-one-half js-payment-type-content-prepaid">
+                  <div class="grid__item non-palm-one-half js-payment-type-prepaid-hide">
                     <div class="form-field mrg-base js-form-label-focus">
                       <label class="form-field__lbl block" for="prepaidAmount">
                         Select Prepaid amount
@@ -151,7 +153,7 @@
                   <!-- //Prepaid Amount -->
 
                   <!-- Card Number -->
-                  <div class="grid__item non-palm-one-half">
+                  <div class="grid__item non-palm-one-half js-payment-type-grid-item-full">
                     <div class="form-field mrg-base js-form-label-focus">
                       <label class="form-field__lbl block" for="cardNumber">
                         <span class="grid grid--flush grid--gutter-half">
@@ -160,7 +162,7 @@
                             <strong class="req-field" title="Required">*</strong>
                           </span>
                           <span class="grid__item one-half txt-right">
-                            <span class="hide-visually">cards accpeted:</span>
+                            <span class="hide-visually">cards accepted:</span>
                             <span class="cursor-default">
                               <span class="sprite sprite--cards sprite--cards--animate sprite--cards--visa js-credit-card-type js-credit-card-type-visa">VISA</span>
                               <span class="sprite sprite--cards sprite--cards--animate sprite--cards--mc js-credit-card-type js-credit-card-type-mc">MasterCard</span>
