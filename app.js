@@ -13,6 +13,9 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+// global view object
+viewObject = {};
+
 // home
 app.get('/', function(req, res) {
   res.render('home');
@@ -25,7 +28,10 @@ app.get('/:view', function(req, res) {
 
 // sub dirs
 app.get('/:section/:view', function(req, res) {
-  res.render(req.params.section + '/' + req.params.view);
+  if (req.params.section === 'logged-in') {
+    viewObject.isloggedin = true;
+  }
+  res.render(req.params.section + '/' + req.params.view, viewObject);
 });
 
 // listening

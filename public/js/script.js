@@ -190,6 +190,11 @@ var paymentTypeSelection = function() {
 
 }
 
+// Toggle main menu for palm sized viewports plugin
+var toggleMenu = function() {
+
+}
+
 /**
  * Initialise functions
  */

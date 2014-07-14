@@ -53,18 +53,53 @@
   <!-- //Old IE banner -->
 
   <!-- Header banner -->
-  <header class="header container container--wide container--light" role="banner">
+  <header class="header container container--wide {{#isloggedin}}container--dark{{/isloggedin}} container--light" role="banner">
     <div class="container">
-      <div class="flag">
-        <div class="flag__img">
-          {{> centre-brand}}
-        </div>
-        <div class="flag__body">
-          <div class="header__nav txt-right txt-family-open-sans">
-            <a href="login" class="header__nav__single inline-block islet-ends islet-left txt-grey-med">Log In</a>
+
+      <!-- Use this HTML when not logged in -->
+      {{#unless isloggedin}}
+        <div class="flag">
+          <div class="flag__img">
+            {{> centre-brand}}
+          </div>
+          <div class="flag__body">
+            <div class="header__nav txt-right txt-family-open-sans">
+              <a href="login" class="header__nav__single inline-block islet-ends islet-left txt-grey-med">Log In</a>
+            </div>
           </div>
         </div>
-      </div>
+      {{/unless}}
+      <!-- //Use this HTML when not logged in -->
+
+      <!-- Use this HTML when logged in -->
+      {{#if isloggedin}}
+        <div class="flag">
+          <div class="flag__img">
+            <!-- BACKEND DEV: should link to the logged-in home page not the main home page -->
+            <a href="home" rel="home">
+              <img alt="Go to home page" src="/images/logo.svg">
+            </a>
+          </div>
+          <div class="flag__body">
+            <div class="header__nav txt-right txt-family-open-sans">
+              <button type="button" class="btn" aria-haspopup="true">
+                <span class="hide-visually">Menu</span>
+                <span class="icon icon--cog icon--flush-top"></span>
+              </button>
+              <nav class="js-menu-toggle" role="navigation" aria-label="Main navigation">
+                <ul>
+                  <li><a href="#">Nav item 1</a></li>
+                  <li><a href="#">Nav item 2</a></li>
+                  <li><a href="#">Nav item 3</a></li>
+                  <li><a href="#">Nav item 4</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+      <!-- //Use this HTML when logged in -->
+
     </div>
   </header>
   <!-- //Header banner -->
