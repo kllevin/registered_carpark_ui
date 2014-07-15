@@ -4,6 +4,7 @@
 
 .main {
   background-color: $color-grey-light;
+  @include to-rem(min-height, 170);
   @include to-rem(padding-top, $spacing-base);
   @include to-rem(padding-bottom, $spacing-dbl);
 }

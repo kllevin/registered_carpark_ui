@@ -190,8 +190,49 @@ var paymentTypeSelection = function() {
 
 }
 
+// Generic toggle function via click event
+$.fn.toggleClick = function() {
+
+  // Store the passed arguments for future reference
+  var methods = arguments;
+  // Cache the number of methods
+  var count = methods.length;
+
+  // Use return this to maintain jQuery chainability
+  return this.each(function(i, item){
+    // For each element you bind to create a local counter for that element
+    var index = 0;
+    $(item).click(function(){
+      // That when called will apply the 'index' th method to that element
+      return methods[index++ % count].apply(this,arguments);
+      // The index % count means that we constrain our iterator between 0 and (count-1)
+    });
+  });
+
+};
+
 // Toggle main menu for palm sized viewports plugin
-var toggleMenu = function() {
+$.fn.toggleMenu = function() {
+
+  var btn = $('.js-menu-toggle-btn');
+  var menu = $(this);
+  var toggleClassName = 'is-expanded';
+
+  // Set default ARIA on button
+  btn.attr({'aria-expanded' : 'false', 'aria-haspopup' : 'true'});
+
+  // Toggle on click event
+  btn.toggleClick(
+    // Expanded state
+    function() {
+      menu.toggleClass(toggleClassName);
+      $(this).toggleClass(toggleClassName).attr('aria-expanded', 'true');
+    },
+    // Collapsed state
+    function() {
+      menu.toggleClass(toggleClassName);
+      $(this).toggleClass(toggleClassName).attr('aria-expanded', 'false');
+  })
 
 }
 
@@ -205,5 +246,6 @@ $(function() {
   fauxLabelFocus();
   determineCardType();
   paymentTypeSelection();
+  $('.js-menu-toggle-menu').toggleMenu();
 
 });

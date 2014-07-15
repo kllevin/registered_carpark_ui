@@ -13,4 +13,11 @@
 }
 
 /* The centre name */
-.centre-brand__centre {@include font-size(20);}
+.centre-brand__centre {
+  @include font-size(20);
+  color: $color-black;
+
+  /* Logged in state and footer version */
+  .is-logged-in &,
+  .footer & {color: $color-white;}
+}

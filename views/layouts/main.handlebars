@@ -52,57 +52,67 @@
   <![endif]-->
   <!-- //Old IE banner -->
 
-  <!-- Header banner -->
-  <header class="header container container--wide {{#isloggedin}}container--dark{{/isloggedin}} container--light" role="banner">
+  <!-- Header -->
+  <header class="header container container--wide container--position {{#isloggedin}}container--dark is-logged-in{{/isloggedin}} container--light" role="banner">
     <div class="container">
-
-      <!-- Use this HTML when not logged in -->
-      {{#unless isloggedin}}
-        <div class="flag">
-          <div class="flag__img">
-            {{> centre-brand}}
-          </div>
-          <div class="flag__body">
-            <div class="header__nav txt-right txt-family-open-sans">
-              <a href="login" class="header__nav__single inline-block islet-ends islet-left txt-grey-med">Log In</a>
-            </div>
-          </div>
+      <div class="flag">
+        <div class="flag__img">
+          {{> centre-brand}}
         </div>
-      {{/unless}}
-      <!-- //Use this HTML when not logged in -->
+        <div class="flag__body txt-right txt-family-open-sans">
 
-      <!-- Use this HTML when logged in -->
-      {{#if isloggedin}}
-        <div class="flag">
-          <div class="flag__img">
-            <!-- BACKEND DEV: should link to the logged-in home page not the main home page -->
-            <a href="home" rel="home">
-              <img alt="Go to home page" src="/images/logo.svg">
-            </a>
-          </div>
-          <div class="flag__body">
-            <div class="header__nav txt-right txt-family-open-sans">
-              <button type="button" class="btn" aria-haspopup="true">
-                <span class="hide-visually">Menu</span>
-                <span class="icon icon--cog icon--flush-top"></span>
-              </button>
-              <nav class="js-menu-toggle" role="navigation" aria-label="Main navigation">
-                <ul>
-                  <li><a href="#">Nav item 1</a></li>
-                  <li><a href="#">Nav item 2</a></li>
-                  <li><a href="#">Nav item 3</a></li>
-                  <li><a href="#">Nav item 4</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+          <!-- Use this HTML when not logged in -->
+          {{#unless isloggedin}}
+            <a href="login" class="header__nav__single inline-block islet-ends islet-left txt-grey-med">Log In</a>
+          {{/unless}}
+          <!-- //Use this HTML when not logged in -->
+
+          <!-- Use this HTML when logged in -->
+          {{#if isloggedin}}
+            <button type="button" class="header__nav__single header__nav__toggle btn islet-ends island-sides js-menu-toggle-btn">
+              <span class="hide-visually">Menu</span>
+              <span class="icon icon--cog icon--lrger icon--color-light"></span>
+            </button>
+            <nav class="header__nav js-menu-toggle-menu" role="navigation">
+              <ul class="header__nav__items block-list">
+                <!--
+                  BACKEND DEV: append `is-active` class to the active link e.g.
+                  `<a href="home" class="block-list__link txt-left is-active">`
+                -->
+                <li class="container">
+                  <a href="home" class="block-list__link txt-left">
+                    <span class="icon icon--car icon--spacing-lrg icon--lrg"></span>
+                    Overview
+                  </a>
+                </li><!--
+                --><li class="container">
+                  <a href="transaction-history" class="block-list__link txt-left">
+                    <span class="icon icon--file-history icon--spacing-lrg icon--lrg"></span>
+                    Transaction History
+                  </a>
+                </li><!--
+                --><li class="container">
+                  <a href="account" class="block-list__link txt-left">
+                    <span class="icon icon--user icon--spacing-lrg icon--lrg"></span>
+                    Account
+                  </a>
+                </li><!--
+                --><li class="container">
+                  <a href="/" class="block-list__link txt-left">
+                    <span class="icon icon--off icon--spacing-lrg icon--lrg"></span>
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          {{/if}}
+          <!-- //Use this HTML when logged in -->
+
         </div>
-      {{/if}}
-      <!-- //Use this HTML when logged in -->
-
+      </div>
     </div>
   </header>
-  <!-- //Header banner -->
+  <!-- //Header -->
 
   <!-- Main content -->
   <main id="main" class="main" role="main">
