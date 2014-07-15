@@ -45,3 +45,6 @@
 
 /* Modifier: bottom with half spacing */
 .divider--top-mrg-half {@include to-rem(padding-top margin-top, $spacing-half);}
+
+/* Modifier: turn off for non JS users */
+.no-js .divider--off-no-js {border: 0;}

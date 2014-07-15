@@ -18,3 +18,14 @@
     @include rotate(360);
   }
 }
+
+.rotate {@include prefix(animation, rotate 1s infinite linear);}
+
+/* Fade in */
+@include prefix-keyframe(fade-in) {
+  0% {opacity: 0;}
+
+  100% {opacity: 1;}
+}
+
+.fade-in {@include prefix(animation, fade-in 0.5s);}

@@ -106,29 +106,39 @@ var fauxLabelFocus = function() {
 // Highlight relevant credit card image determined by the first number a user types into the credit card number input
 var determineCardType = function() {
 
-  var determineCardTypeElem = $('.js-credit-card-type');
-  var determineCardTypeAmex = $('.js-credit-card-type-amex');
-  var determineCardTypeVisa = $('.js-credit-card-type-visa');
-  var determineCardTypeMc = $('.js-credit-card-type-mc');
-
   var determineCardTypeEvent = function() {
+
+    // Wraps everything
+    var container = $(this).closest('.js-credit-card-type-container');
+
+    // Each credit card
+    var elem = container.find('.js-credit-card-type');
+
+    // The cards
+    var amex = container.find('.js-credit-card-type-amex');
+    var visa = container.find('.js-credit-card-type-visa');
+    var mc = container.find('.js-credit-card-type-mc');
+
+    // The first number of the input to determine which card type it is
     var firstNum = $(this).val().slice(0,1);
-    determineCardTypeElem.removeClass('is-visible').removeClass('is-invisible');
+
+    elem.removeClass('is-visible').removeClass('is-invisible');
+
     switch(firstNum) {
       case '3':
-        determineCardTypeAmex.addClass('is-visible');
-        determineCardTypeVisa.addClass('is-invisible');
-        determineCardTypeMc.addClass('is-invisible');
+        amex.addClass('is-visible');
+        visa.addClass('is-invisible');
+        mc.addClass('is-invisible');
         break;
       case '4':
-        determineCardTypeVisa.addClass('is-visible');
-        determineCardTypeAmex.addClass('is-invisible');
-        determineCardTypeMc.addClass('is-invisible');
+        visa.addClass('is-visible');
+        amex.addClass('is-invisible');
+        mc.addClass('is-invisible');
         break;
       case '5':
-        determineCardTypeMc.addClass('is-visible');
-        determineCardTypeAmex.addClass('is-invisible');
-        determineCardTypeVisa.addClass('is-invisible');
+        mc.addClass('is-visible');
+        amex.addClass('is-invisible');
+        visa.addClass('is-invisible');
         break;
     }
   }
@@ -139,53 +149,35 @@ var determineCardType = function() {
 // Payment type selection for Registration 3
 var paymentTypeSelection = function() {
 
-  // Hide elements on page load
-  var hideByDefault = $('.js-payment-type-default-hide');
-
   // Radio inputs
   var inputPrepaid = $('.js-payment-type-prepaid-input');
   var inputPayPerVisit = $('.js-payment-type-pay-per-visit-input');
   var inputPayStation = $('.js-payment-type-paystation-input');
 
   // Hide/show elements based on the above radio inputs
-  var hidePayPerVisit = $('.js-payment-type-pay-per-visit-hide');
-  var showPayPerVisit = $('.js-payment-type-pay-per-visit-show');
-  var hidePrepaid = $('.js-payment-type-prepaid-hide');
-  var hidePayStation = $('.js-payment-type-paystation-hide');
-  var showPayStation = $('.js-payment-type-paystation-show');
-
-  // Misc
-  var miscPaymentTypeGridItem = $('.js-payment-type-grid-item-full');
-
-  // Hide by default
-  hideByDefault.hide();
+  var contentPrepaid = $('.js-payment-type-prepaid-content');
+  var contentPayPerVisit = $('.js-payment-type-pay-per-visit-content');
+  var contentPayStation = $('.js-payment-type-paystation-content');
 
   // Prepaid radio
   inputPrepaid.change(function() {
-    showPayStation.hide();
-    hidePayStation.show();
-    hidePrepaid.show();
-    hidePayPerVisit.show();
-    showPayPerVisit.hide();
-    // Make the grid item half width to balance the grid rows
-    miscPaymentTypeGridItem.removeClass('one-whole').addClass('non-palm-one-half');
+    contentPrepaid.removeClass('js-enabled-hide').addClass('fade-in');
+    contentPayPerVisit.addClass('js-enabled-hide');
+    contentPayStation.addClass('js-enabled-hide');
   });
 
   // Pay per visit radio
   inputPayPerVisit.change(function() {
-    hidePayPerVisit.hide();
-    showPayPerVisit.show();
-    hidePrepaid.hide();
-    hidePayStation.show();
-    showPayStation.hide();
-    // Make the grid item full width to balance the grid rows
-    miscPaymentTypeGridItem.addClass('one-whole').removeClass('non-palm-one-half');
+    contentPayPerVisit.removeClass('js-enabled-hide');
+    contentPrepaid.addClass('js-enabled-hide');
+    contentPayStation.addClass('js-enabled-hide');
   });
 
   // Paystation radio
   inputPayStation.change(function() {
-    showPayStation.show();
-    hidePayStation.hide();
+    contentPayStation.removeClass('js-enabled-hide');
+    contentPrepaid.addClass('js-enabled-hide');
+    contentPayPerVisit.addClass('js-enabled-hide');
   });
 
 }
