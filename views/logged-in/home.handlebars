@@ -1,7 +1,7 @@
 <!-- Intro -->
 <div class="intro mrg-base txt-center txt-grey-med">
   <h2>Hi John!</h2>
-  <!-- BACKEND DEV: Only show sub-heading when not in  Centre -->
+  <!-- BACKEND DEV: Only show sub-heading when not in centre -->
   <h3 class="txt-family-lato">Here's your last visit...</h3>
 </div>
 <!-- //Intro -->
@@ -16,12 +16,16 @@
           <div class="flag__img">
             Monday June 16th, 2014
           </div>
+
+          <!-- Transaction history non-palm -->
           <div class="flag__body txt-right hide-fully--palm">
             <a href="#" class="txt-grey-med-light">
               <span class="icon icon--file-history"></span>
               View Full Transation History
             </a>
           </div>
+          <!-- //Transaction history non-palm -->
+
         </div>
       </div>
     </div>
@@ -29,53 +33,98 @@
 
   <div class="panel__main">
     <div class="container island-ends">
-      <div class="grid grid--flush txt-lrg">
-        <div class="grid__item non-palm-one-quarter">
+      <!-- Logged in but not physically at the centre -->
+      <!--<ul class="grid grid--flush txt-lrg">
+        <li class="grid__item non-palm-one-quarter">
           <div class="grid grid--flush">
-            <div class="grid__item one-half non-palm-one-whole">
-              <span class="txt-grey-med">License Plate</span>
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              License Plate
             </div>
-            <div class="grid__item one-half non-palm-one-whole">
-              <span>CEW 30H</span>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">CEW 30H</strong>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div class="grid__item non-palm-one-quarter">
+        <li class="grid__item non-palm-one-quarter">
           <div class="grid grid--flush">
-            <div class="grid__item one-half non-palm-one-whole">
-              <span class="txt-grey-med">Entry Time</span>
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Entry Time
             </div>
-            <div class="grid__item one-half non-palm-one-whole">
-              <span>09:35 am</span>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">09:35 am</strong>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div class="grid__item non-palm-one-quarter">
+        <li class="grid__item non-palm-one-quarter">
           <div class="grid grid--flush">
-            <div class="grid__item one-half non-palm-one-whole">
-              <span class="txt-grey-med">Exit Time</span>
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Exit Time
             </div>
-            <div class="grid__item one-half non-palm-one-whole">
-              <span>12:43 pm</span>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">12:43 pm</strong>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div class="grid__item non-palm-one-quarter">
+        <li class="grid__item non-palm-one-quarter">
           <div class="grid grid--flush">
-            <div class="grid__item one-half non-palm-one-whole">
-              <span class="txt-grey-med">Amount</span>
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Amount
             </div>
-            <div class="grid__item one-half non-palm-one-whole">
-              <span>$5.00</span>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">$5.00</strong>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>-->
+      <!-- //Logged in and physically at the centre -->
+
+      <!-- Logged in but not physically at the centre -->
+      <ul class="grid grid--flush txt-lrg">
+        <li class="grid__item non-palm-two-sevenths">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              License Plate
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">CEW 30H</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-two-sevenths">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Entry Time
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">09:35 am</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-three-sevenths">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Elapsed Time
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm islet-right">03 Hrs 42 Mins</strong>
+              <a href="#" class="txt-grey-med-light">
+                <span class="icon icon--refresh"></a>
+                <span class="hide-visually">Refresh</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- //Logged in and physically at the centre -->
+
     </div>
 
+    <!-- Transaction history at palm -->
     <div class=" divider divider--top hide-fully--non-palm">
       <div class="container islet-ends txt-center">
         <a href="#">
@@ -84,8 +133,9 @@
         </a>
       </div>
     </div>
-  </div>
+    <!-- //Transaction history at palm -->
 
+  </div>
 </div>
 <!-- //Latest parking info -->
 
@@ -103,9 +153,11 @@
     <div class="container island-ends">
       <table class="table-striped">
       <thead>
-        <th>Time</th>
-        <th class="txt-right">Weekday</th>
-        <th class="txt-right">Weekend</th>
+        <tr>
+          <th>Time</th>
+          <th class="txt-right">Weekday</th>
+          <th class="txt-right">Weekend</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -153,25 +205,25 @@
 <!-- Add another vehicle -->
 <div class="panel panel--unfocused divider divider--btm">
   <div class="container island-ends">
-    <div class="flag flag--off-palm">
-      <div class="flag__img">
+    <div class="slats slats--off-palm txt-center txt-left--non-palm">
+      <div class="slats__img">
         <span class="icon icon--car icon--kilo icon--color-light icon--flush-top"></span>
         <span class="icon icon--car icon--kilo icon--color-light icon--flush-top"></span>
       </div>
-      <div class="flag__body">
+      <div class="slats__body">
         <p><strong>Are you a two car family?</strong> <span class="block">That's cool! You can add up to 4 vehicles to your account</span></p>
-      </div>
-    </div>
 
-    <div class="flag flag--off-palm txt-right">
-      <div class="flag__img">
-        <a href="#" class=" btn btn--main">Add Another Vehicle</a>
-      </div>
-      <div class="flag__body">
-        <a href="#">
-          <span class="icon icon--user icon--color-light txt-lrg"></span>
-          Manage Account
-        </a>
+        <div class="flag flag--shrink-wrap flag--off-palm">
+          <div class="flag__img">
+            <a href="#" class=" btn btn--main mrg-base mrg-base--off-non-palm">Add Another Vehicle</a>
+          </div>
+          <div class="flag__body">
+            <a href="#">
+              <span class="icon icon--user icon--color-light txt-lrg"></span>
+              Manage Account
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

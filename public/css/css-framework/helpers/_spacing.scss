@@ -9,6 +9,10 @@
 /* Base */
 .mrg-base {@include to-rem(margin-bottom, $spacing-base, !important);}
 
+@include respond-min($non-palm) {
+  .mrg-base--off-non-palm {margin-bottom: 0 !important;}
+}
+
 .mrg-base-top {@include to-rem(margin-top, $spacing-base, !important);}
 
 /* Double */

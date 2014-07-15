@@ -13,6 +13,10 @@
 
 .txt-xlrg {@include font-size($font-size-xlrg, $sledgehammer: !important);}
 
+@include respond-min($non-palm) {
+  .txt-xlrg--non-palm {@include font-size($font-size-xlrg, $sledgehammer: !important);}
+}
+
 .txt-reset {font-size: 100% !important;}
 
 /* Alignments */
@@ -22,10 +26,20 @@
 
 .txt-right {text-align: right !important;}
 
+@include respond-min($non-palm) {
+  .txt-center--non-palm {text-align: center !important;}
+
+  .txt-left--non-palm {text-align: left !important;}
+
+  .txt-right--non-palm {text-align: right !important;}
+}
+
 /* Styles */
 .txt-italic {font-style: italic !important;}
 
 .txt-bold {font-weight: bold !important;}
+
+.txt-normal {font-weight: normal !important;}
 
 .txt-caps {text-transform: uppercase !important;}
 
