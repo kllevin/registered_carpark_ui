@@ -147,40 +147,46 @@ var determineCardType = function() {
 }
 
 // Payment type selection for Registration 3
-var paymentTypeSelection = function() {
+var paymentType = {
 
-  // Radio inputs
-  var inputPrepaid = $('.js-payment-type-prepaid-input');
-  var inputPayPerVisit = $('.js-payment-type-pay-per-visit-input');
-  var inputPayStation = $('.js-payment-type-paystation-input');
+  init: function() {
 
-  // Hide/show elements based on the above radio inputs
-  var contentPrepaid = $('.js-payment-type-prepaid-content');
-  var contentPayPerVisit = $('.js-payment-type-pay-per-visit-content');
-  var contentPayStation = $('.js-payment-type-paystation-content');
+    // Radio inputs
+    this.inputPrepaid = $('.js-payment-type-prepaid-input');
+    this.inputPayPerVisit = $('.js-payment-type-pay-per-visit-input');
+    this.inputPayStation = $('.js-payment-type-paystation-input');
+
+    // Hide/show elements based on the above radio inputs
+    this.contentPrepaid = $('.js-payment-type-prepaid-content');
+    this.contentPayPerVisit = $('.js-payment-type-pay-per-visit-content');
+    this.contentPayStation = $('.js-payment-type-paystation-content');
+
+  },
 
   // Prepaid radio
-  inputPrepaid.change(function() {
-    contentPrepaid.removeClass('js-enabled-hide').addClass('fade-in');
-    contentPayPerVisit.addClass('js-enabled-hide');
-    contentPayStation.addClass('js-enabled-hide');
-  });
+  prePaid: function() {
+    paymentType.contentPrepaid.removeClass('js-enabled-hide').addClass('fade-in');
+    paymentType.contentPayPerVisit.addClass('js-enabled-hide');
+    paymentType.contentPayStation.addClass('js-enabled-hide');
+  },
 
   // Pay per visit radio
-  inputPayPerVisit.change(function() {
-    contentPayPerVisit.removeClass('js-enabled-hide');
-    contentPrepaid.addClass('js-enabled-hide');
-    contentPayStation.addClass('js-enabled-hide');
-  });
+  payPerVisit: function() {
+    paymentType.contentPayPerVisit.removeClass('js-enabled-hide');
+    paymentType.contentPrepaid.addClass('js-enabled-hide');
+    paymentType.contentPayStation.addClass('js-enabled-hide');
+  },
 
   // Paystation radio
-  inputPayStation.change(function() {
-    contentPayStation.removeClass('js-enabled-hide');
-    contentPrepaid.addClass('js-enabled-hide');
-    contentPayPerVisit.addClass('js-enabled-hide');
-  });
+  payStation: function() {
+    paymentType.contentPayStation.removeClass('js-enabled-hide');
+    paymentType.contentPrepaid.addClass('js-enabled-hide');
+    paymentType.contentPayPerVisit.addClass('js-enabled-hide');
+  }
 
 }
+
+console.log(paymentType);
 
 // Generic toggle function via click event
 $.fn.toggleClick = function() {
@@ -237,7 +243,12 @@ $(function() {
   formLabelFocus();
   fauxLabelFocus();
   determineCardType();
-  paymentTypeSelection();
   $('.js-menu-toggle-menu').toggleMenu();
+
+  // Payment type selection for Registration 3
+  paymentType.init()
+  paymentType.inputPrepaid.change(paymentType.prePaid);
+  paymentType.inputPayPerVisit.change(paymentType.payPerVisit);
+  paymentType.inputPayStation.change(paymentType.payStation);
 
 });
