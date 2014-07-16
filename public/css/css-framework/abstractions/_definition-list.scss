@@ -19,3 +19,7 @@
 
   &:after {content: ":";}
 }
+
+@include respond-min($non-palm) {
+  .def-list__desc {margin-left: to-em(100);}
+}
