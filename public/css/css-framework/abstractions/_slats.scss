@@ -15,18 +15,10 @@
 
 .slats {@extend %clear-fix;}
 
-	.slats--off-palm {
-		display: block;
-
-		@include respond-min($non-palm) {
-			.slats__img {
-				float: left;
-				@include to-rem(margin-right, $spacing-base);
-			}
-		}
-	}
-
 	.slats__img {
+
+		float: left;
+		@include to-rem(margin-right, $spacing-base);
 
 		/* Modifier: no spacing between image- and text-like content */
 		.slats--compact & {margin-right: 0;}
