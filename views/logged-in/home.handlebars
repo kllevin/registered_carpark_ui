@@ -17,14 +17,15 @@
             Monday June 16th, 2014
           </div>
 
-          <!-- Transaction history non-palm -->
+          <!-- Transaction history -->
+          <!-- BACKEND DEV: this is hidden on mobile and tablet, and is also in a second place below -->
           <div class="flag__body txt-right hide-fully--palm">
             <a href="#" class="txt-grey-med-light">
               <span class="icon icon--file-history" aria-hidden="true"></span>
               View Full Transaction History
             </a>
           </div>
-          <!-- //Transaction history non-palm -->
+          <!-- //Transaction history -->
 
         </div>
       </div>
@@ -33,7 +34,7 @@
 
   <div class="panel__main">
     <div class="container island-ends">
-      <!-- Logged in but not physically at the centre -->
+      <!-- BACKEND DEV: Use this section for users that are logged in but not physically in the centre. -->
       <!--<ul class="grid grid--flush txt-lrg">
         <li class="grid__item non-palm-one-quarter">
           <div class="grid grid--flush">
@@ -81,7 +82,7 @@
       </ul>-->
       <!-- //Logged in and physically at the centre -->
 
-      <!-- Logged in but not physically at the centre -->
+      <!-- BACKEND DEV: Use this section for logged in but not physically at the centre -->
       <ul class="grid grid--flush txt-lrg">
         <li class="grid__item non-palm-two-sevenths">
           <div class="grid grid--flush">
@@ -126,6 +127,7 @@
     </div>
 
     <!-- Transaction history at palm -->
+    <!-- BACKEND DEV: This section is only visible to mobile devices -->
     <div class="divider divider--top hide-fully--non-palm">
       <div class="container islet-ends txt-center">
         <a href="#">
@@ -144,9 +146,7 @@
 <div class="panel divider divider--btm">
   <div class="panel__hdr islet-ends">
     <div class="container">
-      <h3 class="panel__hdr__title txt-family-open-sans txt-reset txt-sml">
-        Parking Rates
-      </h3>
+      <h3 class="panel__hdr__title txt-reset">Parking Rates</h3>
     </div>
   </div>
 
@@ -171,6 +171,7 @@
             <td class="txt-right">$3.00</td>
             <td class="txt-right">$3.00</td>
           </tr>
+          <!-- BACKEND DEV: is-active will apply the row highlight, the em and icon will need to be addied to the highlighted row. -->
           <tr class="is-active">
             <td>
               <em class="hide-visually">Current time slot</em>

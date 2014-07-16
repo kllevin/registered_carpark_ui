@@ -21,6 +21,15 @@
 table {
   @extend %bottom-spacing;
 	width: 100%;
+
+  /* Highlight row */
+  tr.is-active {
+    th,
+    td {
+      color: $color-white;
+      background: $color-btn-primary;
+    }
+  }
 }
 
 	/* Cell padding */
@@ -92,10 +101,4 @@ table {
   &,
   th,
   td {padding: 0;}
-}
-
-/* Active Row */
-table .is-active {
-  color: $color-white !important;
-  background: $color-btn-primary !important;
 }
