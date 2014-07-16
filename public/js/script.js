@@ -108,16 +108,13 @@ var determineCardType = function() {
 
   var determineCardTypeEvent = function() {
 
-    // Wraps everything
-    var container = $(this).closest('.js-credit-card-type-container');
-
     // Each credit card
-    var elem = container.find('.js-credit-card-type');
+    var elem = $('.js-credit-card-type');
 
     // The cards
-    var amex = container.find('.js-credit-card-type-amex');
-    var visa = container.find('.js-credit-card-type-visa');
-    var mc = container.find('.js-credit-card-type-mc');
+    var amex = $('.js-credit-card-type-amex');
+    var visa = $('.js-credit-card-type-visa');
+    var mc = $('.js-credit-card-type-mc');
 
     // The first number of the input to determine which card type it is
     var firstNum = $(this).val().slice(0,1);
@@ -149,44 +146,74 @@ var determineCardType = function() {
 // Payment type selection for Registration 3
 var paymentType = {
 
+  // Initiliase
   init: function() {
+
+    // Hide elements on page load
+    $('.js-payment-type-default-hide').hide();
 
     // Radio inputs
     this.inputPrepaid = $('.js-payment-type-prepaid-input');
     this.inputPayPerVisit = $('.js-payment-type-pay-per-visit-input');
     this.inputPayStation = $('.js-payment-type-paystation-input');
 
-    // Hide/show elements based on the above radio inputs
-    this.contentPrepaid = $('.js-payment-type-prepaid-content');
-    this.contentPayPerVisit = $('.js-payment-type-pay-per-visit-content');
-    this.contentPayStation = $('.js-payment-type-paystation-content');
+    // The elements to hide/show
+    this.introOne = $('.js-payment-type-intro-1');
+    this.introTwo = $('.js-payment-type-intro-2');
+    this.payStationMsg = $('.js-payment-type-paystation-msg');
+    this.theForm = $('.js-payment-type-form');
+    this.formPrepaidAmt = $('.js-payment-type-form-prepaid-amount');
+    this.formCCV = $('.js-payment-type-ccv');
+
+    // Misc
+    this.miscPaymentTypeGridItem = $('.js-payment-type-grid-item-full');
 
   },
 
   // Prepaid radio
   prePaid: function() {
-    paymentType.contentPrepaid.removeClass('js-enabled-hide').addClass('fade-in');
-    paymentType.contentPayPerVisit.addClass('js-enabled-hide');
-    paymentType.contentPayStation.addClass('js-enabled-hide');
+    // Show
+    paymentType.introOne.show().addClass('fade-in');
+    paymentType.theForm.show().addClass('fade-in');
+    paymentType.formPrepaidAmt.show().addClass('fade-in');
+    paymentType.formCCV.show().addClass('fade-in');
+
+    // Hide
+    paymentType.introTwo.hide();
+    paymentType.payStationMsg.hide();
+
+    // Make the grid item half width to balance the grid rows
+    paymentType.miscPaymentTypeGridItem.removeClass('one-whole').addClass('non-palm-one-half');
   },
 
   // Pay per visit radio
   payPerVisit: function() {
-    paymentType.contentPayPerVisit.removeClass('js-enabled-hide');
-    paymentType.contentPrepaid.addClass('js-enabled-hide');
-    paymentType.contentPayStation.addClass('js-enabled-hide');
+    // Show
+    paymentType.introTwo.show().addClass('fade-in');
+    paymentType.theForm.show().addClass('fade-in');
+
+    // Hide
+    paymentType.introOne.hide();
+    paymentType.formPrepaidAmt.hide();
+    paymentType.formCCV.hide();
+    paymentType.payStationMsg.hide();
+
+    // Make the grid item full width to balance the grid rows
+    paymentType.miscPaymentTypeGridItem.addClass('one-whole').removeClass('non-palm-one-half');
   },
 
   // Paystation radio
   payStation: function() {
-    paymentType.contentPayStation.removeClass('js-enabled-hide');
-    paymentType.contentPrepaid.addClass('js-enabled-hide');
-    paymentType.contentPayPerVisit.addClass('js-enabled-hide');
+    // Show
+    paymentType.payStationMsg.show().addClass('fade-in');
+
+    // Hide
+    paymentType.theForm.hide();
+    paymentType.introOne.hide();
+    paymentType.introTwo.hide();
   }
 
 }
-
-console.log(paymentType);
 
 // Generic toggle function via click event
 $.fn.toggleClick = function() {
@@ -246,7 +273,7 @@ $(function() {
   $('.js-menu-toggle-menu').toggleMenu();
 
   // Payment type selection for Registration 3
-  paymentType.init()
+  paymentType.init();
   paymentType.inputPrepaid.change(paymentType.prePaid);
   paymentType.inputPayPerVisit.change(paymentType.payPerVisit);
   paymentType.inputPayStation.change(paymentType.payStation);
