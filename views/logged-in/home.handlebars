@@ -1,0 +1,238 @@
+<!-- Intro -->
+<div class="intro mrg-base txt-center txt-grey-med">
+  <h2>Hi John!</h2>
+  <!-- BACKEND DEV: Only show sub-heading when not in centre -->
+  <p class="txt-family-lato">Here's your last visit&hellip;</p>
+</div>
+<!-- //Intro -->
+
+<!-- Main -->
+<!-- Latest parking info -->
+<div class="panel divider divider--btm">
+  <div class="panel__hdr islet-ends">
+    <div class="container">
+      <div class="panel__hdr__title txt-family-open-sans">
+        <div class="flag">
+          <div class="flag__img">
+            Monday June 16th, 2014
+          </div>
+
+          <!-- Transaction history -->
+          <!-- BACKEND DEV: this is hidden on mobile and tablet, and is also in a second place below -->
+          <div class="flag__body txt-right hide-fully--palm">
+            <a href="#" class="txt-grey-med-light">
+              <span class="icon icon--file-history" aria-hidden="true"></span>
+              View Full Transaction History
+            </a>
+          </div>
+          <!-- //Transaction history -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel__main">
+    <div class="container island-ends">
+      <!-- BACKEND DEV: Use this section for users that are logged in but not physically in the centre. -->
+      <!--<ul class="grid grid--flush txt-lrg">
+        <li class="grid__item non-palm-one-quarter">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              License Plate
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">CEW 30H</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-one-quarter">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Entry Time
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">09:35 a.m.</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-one-quarter">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Exit Time
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">12:43 p.m.</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-one-quarter">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Amount
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">$5.00</strong>
+            </div>
+          </div>
+        </li>
+      </ul>-->
+      <!-- //Logged in and physically at the centre -->
+
+      <!-- BACKEND DEV: Use this section for logged in but not physically at the centre -->
+      <ul class="grid grid--flush txt-lrg">
+        <li class="grid__item non-palm-two-sevenths">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              License Plate
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">CEW 30H</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-two-sevenths">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Entry Time
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm">09:35 a.m.</strong>
+            </div>
+          </div>
+        </li>
+
+        <li class="grid__item non-palm-three-sevenths">
+          <div class="grid grid--flush">
+            <div class="grid__item two-fifths non-palm-one-whole txt-grey-med">
+              Elapsed Time
+            </div>
+            <div class="grid__item three-fifths non-palm-one-whole">
+              <strong class="txt-normal txt-xlrg--non-palm islet-right align-middle">03 Hrs 42 Mins</strong>
+              <!-- BACKEND DEV: page refresh -->
+              <button type="button" class="btn btn--menu txt-grey-med-light">
+                <span class="icon icon--refresh" aria-hidden="true"></span>
+                <span class="hide-visually">Refresh</span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- //Logged in and physically at the centre -->
+
+    </div>
+
+    <!-- Transaction history at palm -->
+    <!-- BACKEND DEV: This section is only visible to mobile devices -->
+    <div class="divider divider--top hide-fully--non-palm">
+      <div class="container islet-ends txt-center">
+        <a href="#">
+          <span class="icon icon--file-history txt-grey-med" aria-hidden="true"></span>
+          View Full Transation History
+        </a>
+      </div>
+    </div>
+    <!-- //Transaction history at palm -->
+
+  </div>
+</div>
+<!-- //Latest parking info -->
+
+<!-- Parking Rates -->
+<div class="panel divider divider--btm">
+  <div class="panel__hdr islet-ends">
+    <div class="container">
+      <h3 class="panel__hdr__title txt-reset">Parking Rates</h3>
+    </div>
+  </div>
+
+  <div class="panel__main">
+    <div class="container island-ends">
+      <table cellspacing="0" class="table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col" class="txt-right">Weekday</th>
+            <th scope="col" class="txt-right">Weekend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0-2 hrs</td>
+            <td class="txt-right">FREE</td>
+            <td class="txt-right">FREE</td>
+          </tr>
+          <tr>
+            <td>2-3 hrs</td>
+            <td class="txt-right">$3.00</td>
+            <td class="txt-right">$3.00</td>
+          </tr>
+          <!-- BACKEND DEV: is-active will apply the row highlight, the em and icon will need to be addied to the highlighted row. -->
+          <tr class="is-active">
+            <td>
+              <em class="hide-visually">Current time slot</em>
+              3-4 hrs
+              <span class="icon icon--arrow-left" aria-hidden="true"></span>
+            </td>
+            <td class="txt-right">$5.00</td>
+            <td class="txt-right">$5.00</td>
+          </tr>
+          <tr>
+            <td>5-6 hrs</td>
+            <td class="txt-right">$7.00</td>
+            <td class="txt-right">$7.00</td>
+          </tr>
+          <tr>
+            <td>7-8 hrs</td>
+            <td class="txt-right">$9.00</td>
+            <td class="txt-right">$9.00</td>
+          </tr>
+          <tr>
+            <td>Max Daily</td>
+            <td class="txt-right">$13.00</td>
+            <td class="txt-right">$13.00</td>
+          </tr>
+          <tr>
+            <td>Overnight</td>
+            <td class="txt-right">$33.00</td>
+            <td class="txt-right">$33.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- //Parking Rates -->
+
+<!-- Add another vehicle -->
+<div class="panel panel--unfocused divider divider--btm">
+  <div class="container island-ends">
+    <div class="grid grid--flush txt-center txt-left--non-palm">
+      <div class="grid__item non-palm-one-quarter txt-center">
+        <span class="icon icon--car icon--kilo icon--flush-top txt-grey-med-light" aria-hidden="true"></span>
+        <span class="icon icon--car icon--kilo icon--flush-top txt-grey-med-light" aria-hidden="true"></span>
+      </div>
+      <div class="grid__item non-palm-three-quarters">
+        <p><strong>Are you a two car family?</strong> <span class="block">That's cool! You can add up to 4 vehicles to your account.</span></p>
+
+        <div class="flag flag--shrink-wrap flag--off-palm">
+          <div class="flag__img mrg-base mrg-base--off-non-palm">
+            <a href="#" class="btn btn--main">Add Another Vehicle</a>
+          </div>
+          <div class="flag__body">
+            <a href="#">
+              <span class="icon icon--user icon--lrg txt-grey-med-light" aria-hidden="true"></span>
+              Manage Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Add another vehicle -->
+<!-- //Main -->
