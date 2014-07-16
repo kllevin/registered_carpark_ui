@@ -93,3 +93,9 @@ table {
   th,
   td {padding: 0;}
 }
+
+/* Active Row */
+table .is-active {
+  color: $color-white !important;
+  background: $color-btn-primary !important;
+}
