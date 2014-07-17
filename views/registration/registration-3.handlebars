@@ -72,7 +72,29 @@
 
   <!-- Step 3 -->
   <li class="panel divider divider--btm">
-  {{> forms/payment-form}}
+    <!--
+        BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+      -->
+
+    <form action="" method="" name="" novalidate>
+      <fieldset>
+
+        <!-- Legend -->
+        <legend class="panel__hdr islet-ends">
+          <span class="container block">
+            <span class="panel__hdr__title txt-family-open-sans block">
+              <span class="hide-visually">Step. </span>
+              <span class="panel__hdr__title__no txt-center inline-block">3</span>
+              Payment Details
+            </span>
+          </span>
+        </legend>
+        <!-- //Legend -->
+
+        {{> forms/payment-form}}
+
+      </fieldset>
+    </form>
   </li>
   <!-- //Step 3 -->
 
