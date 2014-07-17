@@ -1,7 +1,5 @@
 <!-- Intro -->
-<div class="intro mrg-base txt-center txt-grey-med">
-  <h2>Modify Your Details</h2>
-</div>
+{{> intros/modify}}
 <!-- //Intro -->
 
 <!-- Main -->
@@ -26,78 +24,7 @@
       <div class="panel__main">
         <div class="container island-top islet-btm">
 
-          <!-- Form row -->
-          <div class="grid grid--flush">
-
-            <!-- First name -->
-            <div class="grid__item non-palm-one-half">
-              <div class="form-field mrg-base js-form-label-focus">
-                <label class="form-field__lbl block" for="firstName">
-                  First Name
-                  <strong class="req-field" title="Required">*</strong>
-                </label>
-                <!-- BACKEND DEV: prepopulate fields using value attr -->
-                <input type="text" id="firstName" class="txt-input" value="Bette" aria-required="true" required>
-                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your first name</p> -->
-              </div>
-            </div>
-            <!-- //First name -->
-
-            <!-- Last name -->
-            <div class="grid__item non-palm-one-half">
-              <div class="form-field mrg-base js-form-label-focus">
-                <label class="form-field__lbl block" for="lastName">
-                  Last Name
-                  <strong class="req-field" title="Required">*</strong>
-                </label>
-                <input type="text" id="lastName" class="txt-input" aria-required="true" required>
-                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter your last name</p> -->
-              </div>
-            </div>
-            <!-- //Last name -->
-
-          </div>
-          <!-- //Form row -->
-
-          <!-- Form row -->
-          <div class="grid grid--flush">
-
-            <!-- Mobile -->
-            <div class="grid__item non-palm-one-half">
-              <div class="form-field mrg-base js-form-label-focus">
-                <label class="form-field__lbl block" for="mobile">
-                  <span class="grid grid--flush grid--gutter-half">
-                    <span class="grid__item one-quarter">
-                      Mobile
-                      <strong class="req-field" title="Required">*</strong>
-                    </span>
-                    <span class="grid__item three-quarters">
-                      <span class="form-field__msg form-field__msg--help txt-right txt-italic block">to send you alerts when required</span>
-                    </span>
-                  </span>
-                </label>
-                <input type="tel" id="mobile" class="txt-input" aria-required="true" required>
-                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
-              </div>
-            </div>
-            <!-- //Mobile -->
-
-            <!-- Postcode -->
-            <div class="grid__item non-palm-one-half">
-              <div class="form-field mrg-base js-form-label-focus">
-                <label class="form-field__lbl block" for="postcode">
-                  Postcode
-                  <strong class="req-field" title="Required">*</strong>
-                </label>
-                <input type="number" min="1001" max="8000" id="postcode" class="txt-input" aria-required="true" required>
-                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-4">Please enter your postcode</p> -->
-                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-5">Please enter a valid postcode, can only be four digits starting from 1001 and ending in 8000</p> -->
-              </div>
-            </div>
-            <!-- //Postcode -->
-
-          </div>
-          <!-- //Form row -->
+          {{> forms/personal-details}}
 
           <!-- Form row -->
           <div class="grid grid--flush">
@@ -201,83 +128,14 @@
 <!-- //Personal Details -->
 
 <!-- Vehicle Details -->
-<div class="panel panel--unfocused panel--complete divider divider--btm">
-  <div class="panel__hdr islet-ends divider divider--btm">
-    <div class="container">
-      <div class="flag">
-        <div class="flag__img">
-          <h3 class="panel__hdr__title txt-grey-med txt-reset">Vehicle Details</h3>
-        </div>
-        <div class="flag__body txt-right">
-          <!-- BACKEND DEV: Link to appropriate step-->
-          <a href="#" class="btn btn--main btn--main-dark btn--main-compact">Edit</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel__main">
-    <div class="container island-ends">
-      <p><strong>Primary Vehicle:</strong> CDE30H</p>
-
-      <!-- BACKEND DEV: If more than one vehicle -->
-      <!--<dl>
-        <dt class="def-list__title">Primary Vehicle</dt>
-        <dd class="def-list__desc">CDE30H</dd>
-        <dt class="def-list__title">Second Vehicle</dt>
-        <dd class="def-list__desc">CDE30H (0412 064 721)</dd>
-      </dl>-->
-    </div>
-  </div>
-</div>
+{{> modify/vehicle}}
 <!-- //Vehicle Details -->
 
 <!-- Payment Details -->
-<div class="panel panel--unfocused panel--complete divider divider--btm">
-  <div class="panel__hdr islet-ends divider divider--btm">
-    <div class="container">
-      <div class="flag">
-        <div class="flag__img">
-          <h3 class="panel__hdr__title txt-grey-med txt-reset">Payment Details</h3>
-        </div>
-        <div class="flag__body txt-right">
-          <!-- BACKEND DEV: Link to appropriate step-->
-          <a href="#" class="btn btn--main btn--main-dark btn--main-compact">Edit</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel__main">
-    <div class="container island-ends">
-      <p><strong class="block">Pre-paid $50</strong> from your Mastercard ending 2162</p>
-    </div>
-  </div>
-</div>
+{{> modify/payment}}
 <!-- //Payment Details -->
 
 <!-- Notifications -->
-<div class="panel panel--unfocused panel--complete divider divider--btm">
-  <div class="panel__hdr islet-ends divider divider--btm">
-    <div class="container">
-      <div class="flag">
-        <div class="flag__img">
-          <h3 class="panel__hdr__title txt-grey-med txt-reset">Notifications</h3>
-        </div>
-        <div class="flag__body txt-right">
-          <!-- BACKEND DEV: Link to appropriate step-->
-          <a href="#" class="btn btn--main btn--main-dark btn--main-compact">Edit</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel__main">
-    <ul class="container island-ends">
-      <li>Email statements</li>
-      <li>SMS when I enter or exit the centre</li>
-    </ul>
-  </div>
-</div>
+{{> modify/notification}}
 <!-- //Notifications -->
 <!-- //Main -->
