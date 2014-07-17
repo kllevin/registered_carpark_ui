@@ -7,23 +7,23 @@
 <!-- Main -->
 <!-- Personal Details -->
 <div class="panel divider divider--btm">
-  <div class="panel__main">
-    <!--
-      BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
-    -->
+  <!--
+    BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+  -->
 
-    <form action="" method="" name="" novalidate>
-      <!-- Edit personal details -->
-      <fieldset>
-        <!-- Legend -->
-        <legend class="panel__hdr islet-ends">
-          <span class="container block">
-            <span class="panel__hdr__title txt-reset">Personal Details</span>
-          </span>
-        </legend>
-        <!-- //Legend -->
+  <form action="" method="" name="" novalidate>
+    <!-- Edit personal details -->
+    <fieldset>
+      <!-- Legend -->
+      <legend class="panel__hdr islet-ends">
+        <span class="container block">
+          <span class="panel__hdr__title txt-reset">Personal Details</span>
+        </span>
+      </legend>
+      <!-- //Legend -->
 
-        <!-- Form fields -->
+      <!-- Form fields -->
+      <div class="panel__main">
         <div class="container island-top islet-btm">
 
           <!-- Form row -->
@@ -36,7 +36,8 @@
                   First Name
                   <strong class="req-field" title="Required">*</strong>
                 </label>
-                <input type="text" id="firstName" class="txt-input" aria-required="true" required>
+                <!-- BACKEND DEV: prepopulate fields using value attr -->
+                <input type="text" id="firstName" class="txt-input" value="Bette" aria-required="true" required>
                 <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your first name</p> -->
               </div>
             </div>
@@ -126,21 +127,23 @@
           <!-- //Form row -->
 
         </div>
-        <!-- //Form fields -->
+      </div>
+      <!-- //Form fields -->
 
-      </fieldset>
-      <!-- //Edit personal details -->
+    </fieldset>
+    <!-- //Edit personal details -->
 
-      <!-- Change password and submit -->
-      <fieldset>
-        <!-- Legend -->
-        <legend class="one-whole">
-            <span class="container block">
-              <span class="h3 txt-grey-med txt-reset">Change your password</span>
-            </span>
-        </legend>
-        <!-- //Legend -->
+    <!-- Change password and submit -->
+    <fieldset>
+      <!-- Legend -->
+      <legend class="one-whole">
+          <span class="container block">
+            <span class="h3 txt-grey-med txt-reset">Change your password</span>
+          </span>
+      </legend>
+      <!-- //Legend -->
 
+      <div class="panel__main">
         <div class="divider divider--btm">
 
           <!-- Form fields -->
@@ -189,11 +192,11 @@
         </div>
         <!-- //Form submit -->
 
-      </fieldset>
-      <!-- //Change password and submit -->
+      </div>
+    </fieldset>
+    <!-- //Change password and submit -->
 
-    </form>
-  </div>
+  </form>
 </div>
 <!-- //Personal Details -->
 
