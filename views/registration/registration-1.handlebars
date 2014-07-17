@@ -1,7 +1,5 @@
 <!-- Intro -->
-<div class="intro mrg-base txt-center txt-grey-med">
-  <h2>Sign Up For Express Parking</h2>
-</div>
+{{> intro/intro-reg}}
 <!-- //Intro -->
 
 <!-- Main -->
@@ -34,77 +32,7 @@
           <div class="divider divider--btm">
             <div class="container island-top islet-btm">
 
-              <!-- Form row -->
-              <div class="grid grid--flush">
-
-                <!-- First name -->
-                <div class="grid__item non-palm-one-half">
-                  <div class="form-field mrg-base js-form-label-focus">
-                    <label class="form-field__lbl block" for="firstName">
-                      First Name
-                      <strong class="req-field" title="Required">*</strong>
-                    </label>
-                    <input type="text" id="firstName" class="txt-input" aria-required="true" required>
-                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your first name</p> -->
-                  </div>
-                </div>
-                <!-- //First name -->
-
-                <!-- Last name -->
-                <div class="grid__item non-palm-one-half">
-                  <div class="form-field mrg-base js-form-label-focus">
-                    <label class="form-field__lbl block" for="lastName">
-                      Last Name
-                      <strong class="req-field" title="Required">*</strong>
-                    </label>
-                    <input type="text" id="lastName" class="txt-input" aria-required="true" required>
-                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter your last name</p> -->
-                  </div>
-                </div>
-                <!-- //Last name -->
-
-              </div>
-              <!-- //Form row -->
-
-              <!-- Form row -->
-              <div class="grid grid--flush">
-
-                <!-- Mobile -->
-                <div class="grid__item non-palm-one-half">
-                  <div class="form-field mrg-base js-form-label-focus">
-                    <label class="form-field__lbl block" for="mobile">
-                      <span class="grid grid--flush grid--gutter-half">
-                        <span class="grid__item one-quarter">
-                          Mobile
-                          <strong class="req-field" title="Required">*</strong>
-                        </span>
-                        <span class="grid__item three-quarters">
-                          <span class="form-field__msg form-field__msg--help txt-right txt-italic block">to send you alerts when required</span>
-                        </span>
-                      </span>
-                    </label>
-                    <input type="tel" id="mobile" class="txt-input" aria-required="true" required>
-                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
-                  </div>
-                </div>
-                <!-- //Mobile -->
-
-                <!-- Postcode -->
-                <div class="grid__item non-palm-one-half">
-                  <div class="form-field mrg-base js-form-label-focus">
-                    <label class="form-field__lbl block" for="postcode">
-                      Postcode
-                      <strong class="req-field" title="Required">*</strong>
-                    </label>
-                    <input type="number" min="1001" max="8000" id="postcode" class="txt-input" aria-required="true" required>
-                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-4">Please enter your postcode</p> -->
-                    <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-5">Please enter a valid postcode, can only be four digits starting from 1001 and ending in 8000</p> -->
-                  </div>
-                </div>
-                <!-- //Postcode -->
-
-              </div>
-              <!-- //Form row -->
+              {{> forms/personal-details}}
 
               <!-- Form row -->
               <div class="grid grid--flush">
