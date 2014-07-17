@@ -7,133 +7,147 @@
 <!-- Main -->
 <!-- Personal Details -->
 <div class="panel divider divider--btm">
+  <div class="panel__main">
+    <!--
+      BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+    -->
 
-  <!--
-    BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
-  -->
+    <form action="" method="" name="" novalidate>
+      <!-- Edit personal details -->
+      <fieldset>
+        <!-- Legend -->
+        <legend class="panel__hdr islet-ends">
+          <span class="container block">
+            <span class="panel__hdr__title txt-reset">Personal Details</span>
+          </span>
+        </legend>
+        <!-- //Legend -->
 
-  <form action="" method="" name="" novalidate>
-    <fieldset>
+        <!-- Form fields -->
+        <div class="container island-top islet-btm">
 
-      <!-- Legend -->
-      <legend class="panel__hdr islet-ends">
-        <span class="container block">
-          <h3 class="panel__hdr__title txt-reset">
-            Personal Details
-          </h3>
-        </span>
-      </legend>
-      <!-- //Legend -->
+          <!-- Form row -->
+          <div class="grid grid--flush">
 
-      <!-- Form fields -->
-      <div class="panel__main">
+            <!-- First name -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="firstName">
+                  First Name
+                  <strong class="req-field" title="Required">*</strong>
+                </label>
+                <input type="text" id="firstName" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your first name</p> -->
+              </div>
+            </div>
+            <!-- //First name -->
+
+            <!-- Last name -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="lastName">
+                  Last Name
+                  <strong class="req-field" title="Required">*</strong>
+                </label>
+                <input type="text" id="lastName" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter your last name</p> -->
+              </div>
+            </div>
+            <!-- //Last name -->
+
+          </div>
+          <!-- //Form row -->
+
+          <!-- Form row -->
+          <div class="grid grid--flush">
+
+            <!-- Mobile -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="mobile">
+                  <span class="grid grid--flush grid--gutter-half">
+                    <span class="grid__item one-quarter">
+                      Mobile
+                      <strong class="req-field" title="Required">*</strong>
+                    </span>
+                    <span class="grid__item three-quarters">
+                      <span class="form-field__msg form-field__msg--help txt-right txt-italic block">to send you alerts when required</span>
+                    </span>
+                  </span>
+                </label>
+                <input type="tel" id="mobile" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
+              </div>
+            </div>
+            <!-- //Mobile -->
+
+            <!-- Postcode -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="postcode">
+                  Postcode
+                  <strong class="req-field" title="Required">*</strong>
+                </label>
+                <input type="number" min="1001" max="8000" id="postcode" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-4">Please enter your postcode</p> -->
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-5">Please enter a valid postcode, can only be four digits starting from 1001 and ending in 8000</p> -->
+              </div>
+            </div>
+            <!-- //Postcode -->
+
+          </div>
+          <!-- //Form row -->
+
+          <!-- Form row -->
+          <div class="grid grid--flush">
+
+            <!-- Email -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="email">
+                  <span class="grid grid--flush grid--gutter-half">
+                    <span class="grid__item one-third">
+                      Email
+                      <strong class="req-field" title="Required">*</strong>
+                    </span>
+                    <span class="grid__item two-thirds">
+                      <span class="form-field__msg form-field__msg--help txt-right txt-italic block">for confirmation &amp; statements</span>
+                    </span>
+                  </span>
+                </label>
+                <input type="email" id="email" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-6">Please enter your email address</p> -->
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-7">Please enter a valid email address e.g. name@domain.com.</p> -->
+              </div>
+            </div>
+            <!-- //Email -->
+
+          </div>
+          <!-- //Form row -->
+
+        </div>
+        <!-- //Form fields -->
+
+      </fieldset>
+      <!-- //Edit personal details -->
+
+      <!-- Change password and submit -->
+      <fieldset>
+        <!-- Legend -->
+        <legend class="one-whole">
+            <span class="container block">
+              <span class="h3 txt-grey-med txt-reset">Change your password</span>
+            </span>
+        </legend>
+        <!-- //Legend -->
+
         <div class="divider divider--btm">
+
+          <!-- Form fields -->
           <div class="container island-top islet-btm">
 
             <!-- Form row -->
             <div class="grid grid--flush">
-
-              <!-- First name -->
-              <div class="grid__item non-palm-one-half">
-                <div class="form-field mrg-base js-form-label-focus">
-                  <label class="form-field__lbl block" for="firstName">
-                    First Name
-                    <strong class="req-field" title="Required">*</strong>
-                  </label>
-                  <input type="text" id="firstName" class="txt-input" aria-required="true" required>
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your first name</p> -->
-                </div>
-              </div>
-              <!-- //First name -->
-
-              <!-- Last name -->
-              <div class="grid__item non-palm-one-half">
-                <div class="form-field mrg-base js-form-label-focus">
-                  <label class="form-field__lbl block" for="lastName">
-                    Last Name
-                    <strong class="req-field" title="Required">*</strong>
-                  </label>
-                  <input type="text" id="lastName" class="txt-input" aria-required="true" required>
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter your last name</p> -->
-                </div>
-              </div>
-              <!-- //Last name -->
-
-            </div>
-            <!-- //Form row -->
-
-            <!-- Form row -->
-            <div class="grid grid--flush">
-
-              <!-- Mobile -->
-              <div class="grid__item non-palm-one-half">
-                <div class="form-field mrg-base js-form-label-focus">
-                  <label class="form-field__lbl block" for="mobile">
-                    <span class="grid grid--flush grid--gutter-half">
-                      <span class="grid__item one-quarter">
-                        Mobile
-                        <strong class="req-field" title="Required">*</strong>
-                      </span>
-                      <span class="grid__item three-quarters">
-                        <span class="form-field__msg form-field__msg--help txt-right txt-italic block">to send you alerts when required</span>
-                      </span>
-                    </span>
-                  </label>
-                  <input type="tel" id="mobile" class="txt-input" aria-required="true" required>
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
-                </div>
-              </div>
-              <!-- //Mobile -->
-
-              <!-- Postcode -->
-              <div class="grid__item non-palm-one-half">
-                <div class="form-field mrg-base js-form-label-focus">
-                  <label class="form-field__lbl block" for="postcode">
-                    Postcode
-                    <strong class="req-field" title="Required">*</strong>
-                  </label>
-                  <input type="number" min="1001" max="8000" id="postcode" class="txt-input" aria-required="true" required>
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-4">Please enter your postcode</p> -->
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-5">Please enter a valid postcode, can only be four digits starting from 1001 and ending in 8000</p> -->
-                </div>
-              </div>
-              <!-- //Postcode -->
-
-            </div>
-            <!-- //Form row -->
-
-            <!-- Form row -->
-            <div class="grid grid--flush">
-
-              <!-- Email -->
-              <div class="grid__item non-palm-one-half">
-                <div class="form-field mrg-base js-form-label-focus">
-                  <label class="form-field__lbl block" for="email">
-                    <span class="grid grid--flush grid--gutter-half">
-                      <span class="grid__item one-third">
-                        Email
-                        <strong class="req-field" title="Required">*</strong>
-                      </span>
-                      <span class="grid__item two-thirds">
-                        <span class="form-field__msg form-field__msg--help txt-right txt-italic block">for confirmation &amp; statements</span>
-                      </span>
-                    </span>
-                  </label>
-                  <input type="email" id="email" class="txt-input" aria-required="true" required>
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-6">Please enter your email address</p> -->
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-7">Please enter a valid email address e.g. name@domain.com.</p> -->
-                </div>
-              </div>
-              <!-- //Email -->
-
-            </div>
-            <!-- //Form row -->
-
-            <!-- Form row -->
-            <div class="grid grid--flush">
-              <div class="grid__item one-whole mrg-base">
-                <h3 class="txt-grey-med txt-family-open-sans">Change Password</h3>
-              </div>
 
               <!-- New Password -->
               <div class="grid__item non-palm-one-half">
@@ -166,6 +180,7 @@
             <!-- //Form row -->
 
           </div>
+          <!-- //Form fields -->
         </div>
 
         <!-- Form submit -->
@@ -174,11 +189,11 @@
         </div>
         <!-- //Form submit -->
 
-      </div>
-      <!-- //Form fields -->
+      </fieldset>
+      <!-- //Change password and submit -->
 
-    </fieldset>
-  </form>
+    </form>
+  </div>
 </div>
 <!-- //Personal Details -->
 
@@ -188,9 +203,7 @@
     <div class="container">
       <div class="flag">
         <div class="flag__img">
-          <h3 class="panel__hdr__title txt-grey-med txt-reset">
-            Vehicle Details
-          </h3>
+          <h3 class="panel__hdr__title txt-grey-med txt-reset">Vehicle Details</h3>
         </div>
         <div class="flag__body txt-right">
           <!-- BACKEND DEV: Link to appropriate step-->
@@ -222,9 +235,7 @@
     <div class="container">
       <div class="flag">
         <div class="flag__img">
-          <h3 class="panel__hdr__title txt-grey-med txt-reset">
-            Payment Details
-          </h3>
+          <h3 class="panel__hdr__title txt-grey-med txt-reset">Payment Details</h3>
         </div>
         <div class="flag__body txt-right">
           <!-- BACKEND DEV: Link to appropriate step-->
@@ -248,9 +259,7 @@
     <div class="container">
       <div class="flag">
         <div class="flag__img">
-          <h3 class="panel__hdr__title txt-grey-med txt-reset">
-            Notifications
-          </h3>
+          <h3 class="panel__hdr__title txt-grey-med txt-reset">Notifications</h3>
         </div>
         <div class="flag__body txt-right">
           <!-- BACKEND DEV: Link to appropriate step-->
