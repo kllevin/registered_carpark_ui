@@ -29,3 +29,12 @@
 }
 
 .fade-in {@include prefix(animation, fade-in 0.5s);}
+
+/* Fade out */
+@include prefix-keyframe(fade-out) {
+  0% {opacity: 1;}
+
+  100% {opacity: 0;}
+}
+
+.fade-out {@include prefix(animation, fade-out 0.5s);}

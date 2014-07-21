@@ -254,6 +254,35 @@ $.fn.toggleMenu = function() {
       $(this).toggleClass(toggleClassName).attr('aria-expanded', 'false');
   })
 
+};
+
+// Add and remove additional vehicles for the Modify Vehicle screen
+var addRemoveVehicles = function() {
+
+  // Elements
+  var addBtn = $('.js-license-plate-add-btn');
+  var removeBtn = $('.js-license-plate-remove-btn');
+  var hideShow = 'js-hide-show';
+  var additionVehicle = $('.js-license-plate-additional');
+  var additionVehicleContainer = $('.js-license-plate-additional-container');
+
+  // Add
+  addBtn.on('click', function() {
+    additionVehicleContainer.removeClass(hideShow);
+    additionVehicle.filter('.' + hideShow).eq(0).removeClass(hideShow).focus();
+    if (additionVehicle.filter('.' + hideShow).length == 0) {
+      addBtn.addClass(hideShow);
+    }
+  });
+
+  // Remove
+  removeBtn.on('click', function() {
+    $(this).parent(additionVehicle).addClass(hideShow);
+    if (additionVehicle.not('.' + hideShow).length == 0) {
+      additionVehicleContainer.addClass(hideShow);
+    }
+    addBtn.removeClass(hideShow);
+  });
 }
 
 /**
@@ -265,6 +294,7 @@ $(function() {
   formLabelFocus();
   fauxLabelFocus();
   determineCardType();
+  addRemoveVehicles();
   $('.js-menu-toggle-menu').toggleMenu();
 
   // Payment type selection for Registration 3

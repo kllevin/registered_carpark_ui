@@ -13,5 +13,6 @@
 @import "../helpers/text";
 @import "../helpers/vertical-alignments";
 @import "../helpers/cursors";
+@import "../helpers/remove-outline";
 /* Note: this must come after all the helpers so it will always be applied */
 @import "../helpers/hide";

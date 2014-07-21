@@ -43,6 +43,8 @@ textarea[disabled],
 /* Make these styles optional as they're quite opinionated */
 @if $form-base-styles == true {
 
+  .frm-hdr {@include to-rem(padding-bottom, $spacing-base);}
+
   /*
     Text inputs via the `.txt-input` class, `textarea` and `select` (`select` only for non-touch as styling `select`s for the likes of iOS and Android is too inconsistent)
   */
