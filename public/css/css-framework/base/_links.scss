@@ -9,15 +9,6 @@ a {
 
 	&:hover,
   &:focus {opacity: 0.8;}
-
-	/* Make `tel` links not look like links for non-phone devices at this breakpoint */
-	@include respond-min($non-palm) {
-		&[href^="tel:"] {
-			@include disguised-link;
-
-			&:focus {outline: none;}
-		}
-	}
 }
 
 /* Print */

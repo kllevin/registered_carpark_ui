@@ -11,7 +11,4 @@
 .form-field__msg {color: $color-grey-med;}
 
 /* Label focused */
-.is-focused {
-  .form-field__lbl,
-  .form-field__msg {color: $color-black;}
-}
+.is-focused .form-field__lbl {color: $color-black;}

@@ -7,15 +7,12 @@
  */
 
 var htmlElement = $('html');
-var telLinks = $('a[href^="tel:"]');
 
 /**
  * Detect touch/non-touch
  */
 
-var isTouch = ('ontouchstart' in window) ||
-							window.DocumentTouch &&
-							document instanceof DocumentTouch;
+var isTouch = ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
 
 // Add hooks
 if (isTouch) {
@@ -39,9 +36,7 @@ if (isAndroid) {
  * Detect iOS devices
  */
 
-var isiOS = navigator.userAgent.match(/iPhone/i) ||
-						navigator.userAgent.match(/iPad/i) ||
-						navigator.userAgent.match(/iPod/i);
+var isiOS = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i);
 
 var isiPhone = navigator.userAgent.match(/iPhone/i);
 

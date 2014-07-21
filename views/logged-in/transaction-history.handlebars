@@ -1,0 +1,145 @@
+<!-- Intro -->
+<div class="intro mrg-base txt-center txt-grey-med">
+  <h2>Payment History</h2>
+</div>
+<!-- //Intro -->
+
+<!-- Search and export -->
+<div class="grid grid--flush hide-fully--palm mrg-half">
+
+  <!-- Search -->
+  <div class="grid__item non-palm-three-quarters">
+    <form action="" method="" name="" role="search" novalidate>
+      <fieldset>
+        <legend class="hide-visually">Search transaction history</legend>
+        <label for="fromDate" class="hide-visually">From date</label>
+        <input type="search" maxlength="10" id="fromDate" class="txt-input txt-input--no-bg txt-input--equal-height-btn align-middle one-quarter" aria-required="true" required placeholder="From">&nbsp;
+        <label for="toDate" class="hide-visually">To date</label>
+        <input type="search" maxlength="10" id="toDate" class="txt-input txt-input--no-bg txt-input--equal-height-btn align-middle one-quarter" aria-required="true" required placeholder="To">&nbsp;
+        <button type="submit" class="btn btn--main btn--main-compact">Search</button>
+      </fieldset>
+    </form>
+  </div>
+  <!-- //Search -->
+
+  <!-- Export -->
+  <!-- BACKEND DEV: only render this HTML when they're no records to export -->
+  <div class="grid__item non-palm-one-quarter txt-right">
+    <a href="#" class="btn btn--main btn--main-dark btn--main-compact" title="Export as a PDF file" download="Westfield-parking-transaction-history.pdf">
+      <span class="icon icon--file-pdf" aria-hidden="true"></span>
+      Export
+      <span class="hide-visually"> transaction history (PDF file)</span>
+    </a>
+  </div>
+  <!-- //Export -->
+
+</div>
+<!-- //Search and export -->
+
+<!-- Main -->
+
+<!-- No transaction records notification -->
+<!-- BACKEND DEV: only render this HTML when they're no records -->
+<!-- <div class="panel panel--unfocused divider divider--btm">
+  <div class="panel__main">
+    <p class="container island-ends txt-center txt-grey-med"><strong>No transaction records</strong></p>
+  </div>
+</div> -->
+<!-- //No transaction records notification -->
+
+<!-- All transactions -->
+<div class="panel divider divider--btm">
+  <div class="panel__hdr islet-ends">
+    <div class="container">
+      <div class="panel__hdr__title txt-family-open-sans">
+        <div class="flag">
+          <div class="flag__img">
+            <h3 class="panel__hdr__title txt-reset">All Transactions</h3>
+          </div>
+          <div class="flag__body txt-right txt-grey-med-light txt-sml">44 records found</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel__main">
+    <div class="container island-ends">
+
+      <!-- Transactions table -->
+      <table cellspacing="0" class="table-striped txt-sml">
+        <colgroup>
+          <col class="non-palm-one-seventh"></col>
+          <col class="non-palm-one-sixth"></col>
+          <col class="non-palm-one-third"></col>
+          <col class="non-palm-one-sixth"></col>
+          <col class="non-palm-one-eighth"></col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col" class="hide-fully--palm-table-cell">Lic. plate</th>
+            <th scope="col">Description</th>
+            <th scope="col" class="hide-fully--palm-table-cell">Location</th>
+            <th scope="col" class="txt-right">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>dd/mm/yy</td>
+            <td class="hide-fully--palm-table-cell">XXX XXX</td>
+            <td>
+              <!-- BACKEND DEV: we repeat lic. plate here for mobile users -->
+              <span class="block hide-fully--non-palm">
+                <span class="hide-visually">Lic. plate </span>
+                XXX XXX
+              </span>
+              Parking dd/mm/yy
+              <span class="block">Entry hh:mm Exit hh:mm</span>
+              <!-- BACKEND DEV: additional items get rendered in a `span` and prefixed with an asterisk: "*" -->
+              <span class="block txt-italic txt-grey-med hide-fully--palm">*{numbersold} x {productname} – {productdescription}</span>
+            </td>
+            <td class="hide-fully--palm-table-cell">
+              <span class="block txt-break-word">Centre name</abbr>
+            </td>
+            <td class="txt-right">
+              <span class="block">$99</span>
+              <!-- BACKEND DEV: additional items costs get rendered in a `span` and prefixed with an asterisk: "*" -->
+              <span class="block txt-italic txt-grey-med hide-fully--palm">*$39</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- //Transactions table -->
+
+      <!-- Pager -->
+      <!-- BACKEND DEV: only render this HTML when they're records to paginate -->
+      <nav class="pager txt-center" role="navigation" aria-label="Transactions pagination">
+        <span class="hide-visually">Page </span>2 of 1572
+        <a class="pager__link pager__link--prev" href="#" rel="prev">
+          <span class="icon icon--arrow-left-full icon--lrg" aria-hidden="true"></span>
+          Prev
+        </a>
+        <a class="pager__link pager__link--next" href="#" rel="next">
+          Next
+          <span class="icon icon--arrow-right-full icon--lrg" aria-hidden="true"></span>
+        </a>
+      </nav>
+      <!-- //Pager -->
+
+    </div>
+  </div>
+</div>
+<!-- //All transactions -->
+
+<!-- Mobile login notification -->
+<!-- BACKEND DEV: if they're no records to show then do not render this HTML, basically if the "No transaction records" HTML above is rendering then do not render this -->
+<div class="panel panel--unfocused divider divider--btm hide-fully--non-palm">
+  <div class="panel__main">
+    <div class="container island-ends txt-center">
+      <p><span class="txt-grey-med">Log in via desktop to see entire transaction details or contact</span> <a href="tel:0295256344">Miranda Parking</a>.</p>
+    </div>
+  </div>
+</div>
+<!-- //Mobile login notification -->
+
+<!-- //Main -->

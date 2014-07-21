@@ -9,6 +9,7 @@
   .table-bordered           - Bordered table
   .table-cell-padding-off   - No cell padding
   .table-horiz-scroll       - Enable horizontal scroll bar on table container
+  .table-fixed              - Allows the overflow property to be used to handle content that exceeds the width of a table cell
 
   Styleguide Tables
 */
@@ -32,10 +33,11 @@ table {
   }
 }
 
-	/* Cell padding */
+	/* Cell padding and vertical alignment */
 	th,
 	td {
-    @include to-em(padding, $spacing-quarter);
+    @include to-em(padding, $spacing-third);
+    vertical-align: top;
 
 		@include respond-min($non-palm) {
       @include to-em(padding, $spacing-half);

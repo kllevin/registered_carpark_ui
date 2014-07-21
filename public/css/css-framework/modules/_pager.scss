@@ -4,59 +4,34 @@
 
 /*
 	For paging between sets of pages via 'Prev' and 'Next' links, also includes a page count.
-
-  .pager--pin-board       - Pin board
-  .pager--compact         - Compact
-
-	Styleguide Pager
 */
 
-.pager {
-  line-height: normal;
+.pager {position: relative;}
 
-  /* Prev and next */
-  .btn--main {
+  /* Prev and next links */
+  .pager__link {
     position: absolute;
     top: 0;
   }
 
-    /* Arrow icons */
-    .icon:before {@include font-size(20, 1);}
-}
+  /* Modifier: prev */
+  .pager__link--prev {
+    left: 0;
 
-  /* Inner container */
-  .pager__inner {
-    position: relative;
-    text-align: center;
+    /* Position off-centre at this breakpoint */
+    @include respond-min($non-palm) {
+      left: 50%;
+      @include to-rem(margin-left, -$spacing-dbl*3);
+    }
   }
 
-    /* Count */
-    .pager__count {
-      @include to-em(padding-top padding-bottom, $spacing-half);
-      display: inline-block;
+  /* Modifier: next */
+  .pager__link--next {
+    right: 0;
 
-      /* Turn off bottom padding when they're no prev/next links */
-      &:only-child {padding: 0;}
+    /* Position off-centre at this breakpoint */
+    @include respond-min($non-palm) {
+      right: 50%;
+      @include to-rem(margin-right, -$spacing-dbl*3);
     }
-
-    /* Prev */
-    .pager__prev {
-      left: 0;
-
-      /* Position off-centre at this breakpoint */
-      @include respond-min($non-palm) {
-        left: 50%;
-        @include to-rem(margin-left, -$spacing-dbl*4);
-      }
-    }
-
-    /* Next */
-    .pager__next {
-      right: 0;
-
-      /* Position off-centre at this breakpoint */
-      @include respond-min($non-palm) {
-        right: 50%;
-        @include to-rem(margin-right, -$spacing-dbl*4);
-      }
-    }
+  }

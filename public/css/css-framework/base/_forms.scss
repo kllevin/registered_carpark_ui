@@ -106,18 +106,18 @@ textarea[disabled],
     }
   }
 
-  /* Modifiers: alternate widths */
+  /* Modifier: no text input bg */
+  .txt-input--no-bg {
+    background-color: transparent;
+    border-color: $color-grey-med;
+  }
 
-  /*
-    Note: need to get ugly and increase the specficity due to inputs usually being embedded in other modules which apply their own widths.
-  */
-  html .txt-input.txt-input--sml {width: 30%;}
-
-  html .txt-input.txt-input--med {width: 60%;}
+  /* Modifier: equal height of main button */
+  .txt-input--equal-height-btn {@include to-rem(padding-top padding-bottom, $spacing-half - 1);}
 
   /* Placeholder */
   @include input-placeholder {
-  	color: $color-txt-light;
+  	color: $color-grey-med-light;
   	font-style: italic;
   }
 

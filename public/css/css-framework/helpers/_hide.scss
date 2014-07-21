@@ -14,7 +14,8 @@
 	/* Palm - need 3 versions for `block` (default), `inline` and `inline-block` */
 	.hide-fully--palm,
 	.hide-fully--palm-inline,
-	.hide-fully--palm-inline-block {display: none !important;}
+	.hide-fully--palm-inline-block,
+	.hide-fully--palm-table-cell {display: none !important;}
 
 	@include respond-min($non-palm) {
 		.hide-fully--palm {display: block !important;}
@@ -22,6 +23,8 @@
 		.hide-fully--palm-inline {display: inline !important;}
 
 		.hide-fully--palm-inline-block {display: inline-block !important;}
+
+		.hide-fully--palm-table-cell {display: table-cell !important;}
 	}
 
 	/* Non-palm */
