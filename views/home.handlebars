@@ -1,1 +1,95 @@
-[HOME]
+<!-- Intro -->
+<div class="intro mrg-base txt-center txt-grey-med">
+  <h2>Customer Log In</h2>
+</div>
+<!-- //Intro -->
+
+<!-- Main -->
+
+<!-- Login -->
+
+<!--
+  BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+-->
+
+<form class="panel divider divider--btm" action="" method="" name="" novalidate>
+  <fieldset>
+
+    <!-- Legend -->
+    <legend class="panel__hdr islet-ends">
+      <span class="container block">
+        <span class="panel__hdr__title txt-family-open-sans block">
+          Log in to express parking
+        </span>
+      </span>
+    </legend>
+    <!-- //Legend -->
+
+    <!-- Form fields -->
+    <div class="panel__main">
+      <div class="divider divider--btm">
+        <div class="container island-top islet-btm">
+
+          <!-- Form row -->
+          <div class="grid grid--flush">
+
+            <!-- Email -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="email">
+                  Email
+                  <strong class="req-field" title="Required">*</strong>
+                </label>
+                <input type="email" id="email" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please enter your email address</p> -->
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter a valid email address e.g. name@domain.com.</p> -->
+              </div>
+            </div>
+            <!-- //Email -->
+
+            <!-- Password -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-base js-form-label-focus">
+                <label class="form-field__lbl block" for="password">
+                  Password
+                  <strong class="req-field" title="Required">*</strong>
+                </label>
+                <input type="password" id="password" class="txt-input" aria-required="true" required>
+                <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter a password</p> -->
+              </div>
+            </div>
+            <!-- //Password -->
+
+          </div>
+          <!-- //Form row -->
+
+        </div>
+      </div>
+
+      <!-- Form submit -->
+      <div class="container island-ends txt-center">
+        <button type="submit" class="btn btn--main">Log In</button>
+        <div class="mrg-third-top">
+          <a href="forgot-password">Forgot password?</a>
+        </div>
+      </div>
+      <!-- //Form submit -->
+
+    </div>
+    <!-- //Form fields -->
+
+  </fieldset>
+</form>
+<!-- //Login -->
+
+<!-- Register -->
+<div class="panel panel--unfocused divider divider--btm">
+  <div class="panel_main container island-ends txt-center">
+    <p><strong>Not a Member Yet?</strong></p>
+    <!-- BACKEND DEV: Link to first registration step -->
+    <a href="#" class="btn btn--main btn--main-dark">Register Now</a>
+  </div>
+</div>
+<!-- //Register -->
+
+<!-- //Main -->
