@@ -23,16 +23,17 @@
 
   <form class="panel__main" action="" method="" name="" novalidate>
 
-    <!-- Primary vehicle license plate -->
+    <!-- Primary vehicle -->
     <div class="divider divider--btm">
       <div class="container island-ends">
         <fieldset>
           <legend class="frm-hdr one-whole h3 txt-grey-med txt-reset flush-btm">Primary Vehicle</legend>
 
-          <!-- Primary license plate -->
           <div class="grid grid--flush">
+
+            <!-- Primary license plate -->
             <div class="grid__item non-palm-one-half">
-              <div class="form-field mrg-third js-form-label-focus">
+              <div class="form-field mrg-half js-form-label-focus">
                 <label class="form-field__lbl block" for="licensePlate">
                   Primary License Plate
                   <strong class="req-field" title="Required">*</strong>
@@ -42,21 +43,46 @@
                 <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter a valid license plate number</p> -->
               </div>
             </div>
-          </div>
-          <!-- //Primary license plate -->
+            <!-- //Primary license plate -->
 
-          <!-- Add another vehicle button -->
-          <div class="grid grid--flush">
+            <!-- Vehicle make -->
             <div class="grid__item non-palm-one-half">
-              <button type="button" class="btn btn--full btn--main btn--main-dark btn--main-compact fade-in js-license-plate-add-btn js-disabled-hide">+ Add another vehicle</button>
+              <div class="form-field mrg-half js-form-label-focus">
+                <label class="form-field__lbl block" for="vehicleMake">Vehicle Make</label>
+                <input type="text" id="vehicleMake" class="txt-input">
+              </div>
             </div>
+            <!-- //Vehicle make -->
+
           </div>
-          <!-- //Add another vehicle button -->
+
+          <div class="grid grid--flush">
+
+            <!-- Vehicle model -->
+            <div class="grid__item non-palm-one-half">
+              <div class="form-field mrg-half js-form-label-focus">
+                <label class="form-field__lbl block" for="vehicleModel">Vehicle Model</label>
+                <input type="text" id="vehicleModel" class="txt-input">
+              </div>
+            </div>
+            <!-- //Vehicle model -->
+
+          </div>
+
+          <div class="grid grid--flush">
+
+            <!-- Add another vehicle button -->
+            <div class="grid__item non-palm-one-half">
+              <button type="button" class="btn btn--full btn--main btn--main-dark fade-in js-license-plate-add-btn js-disabled-hide">+ Add another vehicle</button>
+            </div>
+            <!-- //Add another vehicle button -->
+
+          </div>
 
         </fieldset>
       </div>
     </div>
-    <!-- //Primary vehicle license plate -->
+    <!-- //Primary vehicle -->
 
     <!-- Additional vehicle license plates -->
     <div class="divider divider--btm js-license-plate-additional-container js-hide-show">
@@ -67,7 +93,10 @@
 
           <!-- Additional vehicle #1 -->
           <div class="mrg-base fade-in no-outline js-hide-show js-license-plate-additional" tabindex="-1">
+
             <div class="grid grid--flush">
+
+              <!-- License plate -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-half js-form-label-focus">
                   <label class="form-field__lbl block" for="licensePlate2">License Plate</label>
@@ -76,13 +105,40 @@
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter a valid license plate number</p> -->
                 </div>
               </div>
+              <!-- //License plate -->
+
+              <!-- Mobile no -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-half js-form-label-focus">
-                  <label class="form-field__lbl block" for="mobile2">Mobile for Vehicle</label>
-                  <input type="tel" id="mobile2" class="txt-input" aria-required="true" required>
+                  <label class="form-field__lbl block" for="mobile">Mobile for Vehicle</label>
+                  <input type="tel" id="mobile" class="txt-input" aria-required="true" required>
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
                 </div>
               </div>
+              <!-- //Mobile no -->
+
+            </div>
+
+            <div class="grid grid--flush">
+
+              <!-- Vehicle model -->
+              <div class="grid__item non-palm-one-half">
+                <div class="form-field mrg-half js-form-label-focus">
+                  <label class="form-field__lbl block" for="vehicleModel2">Vehicle Model</label>
+                  <input type="text" id="vehicleModel2" class="txt-input">
+                </div>
+              </div>
+              <!-- //Vehicle model -->
+
+              <!-- Vehicle make -->
+              <div class="grid__item non-palm-one-half">
+                <div class="form-field mrg-half js-form-label-focus">
+                  <label class="form-field__lbl block" for="vehicleMake2">Vehicle Make</label>
+                  <input type="text" id="vehicleMake2" class="txt-input">
+                </div>
+              </div>
+              <!-- //Vehicle make -->
+
             </div>
             <button type="button" class="btn btn--faux-link js-license-plate-remove-btn js-disabled-hide">Remove this vehicle</button>
           </div>
@@ -90,7 +146,10 @@
 
           <!-- Additional vehicle #2 -->
           <div class="mrg-base fade-in no-outline js-hide-show js-license-plate-additional" tabindex="-1">
+
             <div class="grid grid--flush">
+
+              <!-- License plate -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-half js-form-label-focus">
                   <label class="form-field__lbl block" for="licensePlate3">License Plate</label>
@@ -99,13 +158,40 @@
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter a valid license plate number</p> -->
                 </div>
               </div>
+              <!-- //License plate -->
+
+              <!-- Mobile no -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-half js-form-label-focus">
-                  <label class="form-field__lbl block" for="mobile3">Mobile for Vehicle</label>
-                  <input type="tel" id="mobile3" class="txt-input" aria-required="true" required>
+                  <label class="form-field__lbl block" for="mobile2">Mobile for Vehicle</label>
+                  <input type="tel" id="mobile2" class="txt-input" aria-required="true" required>
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
                 </div>
               </div>
+              <!-- //Mobile no -->
+
+            </div>
+
+            <div class="grid grid--flush">
+
+              <!-- Vehicle model -->
+              <div class="grid__item non-palm-one-half">
+                <div class="form-field mrg-half js-form-label-focus">
+                  <label class="form-field__lbl block" for="vehicleModel3">Vehicle Model</label>
+                  <input type="text" id="vehicleModel3" class="txt-input">
+                </div>
+              </div>
+              <!-- //Vehicle model -->
+
+              <!-- Vehicle make -->
+              <div class="grid__item non-palm-one-half">
+                <div class="form-field mrg-half js-form-label-focus">
+                  <label class="form-field__lbl block" for="vehicleMake3">Vehicle Make</label>
+                  <input type="text" id="vehicleMake3" class="txt-input">
+                </div>
+              </div>
+              <!-- //Vehicle make -->
+
             </div>
             <button type="button" class="btn btn--faux-link js-license-plate-remove-btn js-disabled-hide">Remove this vehicle</button>
           </div>
@@ -113,7 +199,10 @@
 
           <!-- Additional vehicle #3 -->
           <div class="mrg-base fade-in no-outline js-hide-show js-license-plate-additional" tabindex="-1">
+
             <div class="grid grid--flush">
+
+              <!-- License plate -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-half js-form-label-focus">
                   <label class="form-field__lbl block" for="licensePlate4">License Plate</label>
@@ -122,13 +211,40 @@
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter a valid license plate number</p> -->
                 </div>
               </div>
+              <!-- //License plate -->
+
+              <!-- Mobile no -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-half js-form-label-focus">
-                  <label class="form-field__lbl block" for="mobile4">Mobile for Vehicle</label>
-                  <input type="tel" id="mobile4" class="txt-input" aria-required="true" required>
+                  <label class="form-field__lbl block" for="mobile3">Mobile for Vehicle</label>
+                  <input type="tel" id="mobile3" class="txt-input" aria-required="true" required>
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter your mobile number</p> -->
                 </div>
               </div>
+              <!-- //Mobile no -->
+
+            </div>
+
+            <div class="grid grid--flush">
+
+              <!-- Vehicle model -->
+              <div class="grid__item non-palm-one-half">
+                <div class="form-field mrg-half js-form-label-focus">
+                  <label class="form-field__lbl block" for="vehicleModel4">Vehicle Model</label>
+                  <input type="text" id="vehicleModel4" class="txt-input">
+                </div>
+              </div>
+              <!-- //Vehicle model -->
+
+              <!-- Vehicle make -->
+              <div class="grid__item non-palm-one-half">
+                <div class="form-field mrg-half js-form-label-focus">
+                  <label class="form-field__lbl block" for="vehicleMake4">Vehicle Make</label>
+                  <input type="text" id="vehicleMake4" class="txt-input">
+                </div>
+              </div>
+              <!-- //Vehicle make -->
+
             </div>
             <button type="button" class="btn btn--faux-link js-license-plate-remove-btn js-disabled-hide">Remove this vehicle</button>
           </div>
