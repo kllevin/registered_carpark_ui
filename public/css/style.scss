@@ -54,7 +54,23 @@
 */
 
 /* Utils */
-@import "css-framework/imports/utils";
+@import "css-framework/utils/vars";
+@import "css-framework/utils/mixins";
+@import "css-framework/utils/functions";
+@import "css-framework/utils/normalize";
+@import "css-framework/utils/reset";
+@import "css-framework/utils/animations";
+
+  /* Silent placeholders */
+  @import "css-framework/utils/placeholders/bottom-spacing";
+  @import "css-framework/utils/placeholders/clear-fix";
+  @import "css-framework/utils/placeholders/sprite-bg";
+  @import "css-framework/utils/placeholders/sprite-icon";
+  @import "css-framework/utils/placeholders/transitions";
+  @import "css-framework/utils/placeholders/hide";
+  @import "css-framework/utils/placeholders/new-block-formatting-context";
+  @import "css-framework/utils/placeholders/smooth-touch-scrolling";
+  @import "css-framework/utils/placeholders/image-replacement";
 
 /* Base */
 @import "css-framework/imports/base";
@@ -65,10 +81,21 @@
 @import "css-framework/buttons/faux-link";
 
 /* Layout */
-@import "css-framework/imports/layout";
+@import "css-framework/layout/containers";
+@import "css-framework/layout/forms";
+
+  /* Layout -> Grid */
+  @import "css-framework/layout/grid/grid";
+  @import "css-framework/layout/grid/widths";
 
 /* Abstractions */
-@import "css-framework/imports/abstractions";
+@import "css-framework/abstractions/block-list";
+@import "css-framework/abstractions/definition-list";
+@import "css-framework/abstractions/divider";
+@import "css-framework/abstractions/flag";
+@import "css-framework/abstractions/horizontal-list";
+@import "css-framework/abstractions/island";
+@import "css-framework/abstractions/slats";
 
 /* Modules */
 @import "css-framework/modules/icon";
@@ -77,7 +104,14 @@
 @import "css-framework/modules/pager";
 
 /* Helpers */
-@import "css-framework/imports/helpers";
+@import "css-framework/helpers/display";
+@import "css-framework/helpers/spacing";
+@import "css-framework/helpers/text";
+@import "css-framework/helpers/vertical-alignments";
+@import "css-framework/helpers/cursors";
+@import "css-framework/helpers/remove-outline";
+/* Note: this must come after all the helpers so it will always be applied */
+@import "css-framework/helpers/hide";
 
 /* Print */
 @import "css-framework/imports/print";
