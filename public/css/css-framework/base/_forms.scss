@@ -55,7 +55,7 @@ textarea[disabled],
     border-radius: $border-radius;
     border: 1px solid $color-input-border;
     background: $color-input-bg;
-    @extend %transition-subtle;
+    @include prefix(transition, border 0.2s linear);
 
     &:focus {border-color: $color-input-focus;}
   }
