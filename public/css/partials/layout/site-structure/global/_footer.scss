@@ -22,12 +22,6 @@
     }
   }
 
-  /* Legal */
-  .footer__legal {
-    &,
-    a {color: $color-grey-med-light;}
-  }
-
   /* Modifier: T&C's */
   .footer__legal--terms a {
     display: block;
