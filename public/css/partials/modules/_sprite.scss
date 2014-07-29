@@ -15,7 +15,7 @@
   background-size: 35px 88px;
 
   /* When used in the 'Forms' layout */
-  .form-field & {@include to-em(margin-top, -2);}
+  .form-field & {@include to-rem(margin-top, -$spacing-micro);}
 
   /* When used with the JavaScript function: `determineCardType()` */
   &.sprite--cards--animate {@include prefix(transition, all 0.15s ease-out);}

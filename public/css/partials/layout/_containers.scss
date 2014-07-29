@@ -7,11 +7,11 @@
   .container-non-palm--narrow {@include to-rem(max-width, $page-container-max-width-narrow);}
 }
 
-/* Modifier: darkless */
-.container--dark-less {background-color: $color-grey-dark;}
-
 /* Modifier: light */
 .container--light {background-color: $color-white;}
 
 /* Modifier: dark */
 .container--dark {background-color: $color-black;}
+
+/* Modifier: darkless */
+.container--dark-less {background-color: $color-grey-dark;}
