@@ -50,7 +50,7 @@
 -------------------------------------------------------*/
 
 /*
-  Note: by default everything is imported. But if you want to be selective and you definitely should, so your CSS is as lean as possible, then import via groups e.g. Abstractions or at the individual partial level. If you only want specific partials then grab the relevant `@import` from the relevant file in 'css-framework/partials/imports' and update the path. If you're being selective then make sure to import in the correct order which is specified below.
+  Note: by default everything is imported. But if you want to be selective and you definitely should, so your CSS is as lean as possible, then import via groups e.g. Abstractions or at the individual partial level. If you only want specific partials then grab the relevant `@import` from the relevant file in 'css-framework/partials/imports' and update the path. If you are being selective then make sure to import in the correct order which is specified below.
 */
 
 /* Utils */

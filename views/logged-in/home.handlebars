@@ -158,51 +158,72 @@
       <table cellspacing="0" class="table-striped">
         <thead>
           <tr>
-            <th scope="col">Time</th>
-            <th scope="col" class="txt-right">Weekday</th>
-            <th scope="col" class="txt-right">Weekend</th>
+            <th scope="col">Hours parked</th>
+            <th scope="col" class="txt-right">Charge</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>0 &#8211; 2 hrs</td>
-            <td class="txt-right">FREE</td>
+            <td>0 &#8211; 1</td>
             <td class="txt-right">FREE</td>
           </tr>
           <tr>
-            <td>2 &#8211; 3 hrs</td>
-            <td class="txt-right">$3.00</td>
-            <td class="txt-right">$3.00</td>
+            <td>1 &#8211; 2</td>
+            <td class="txt-right">FREE</td>
           </tr>
-          <!-- BACKEND DEV: is-active will apply the row highlight, the em and icon will need to be addied to the highlighted row. -->
-          <tr class="is-active">
+          <!-- BACKEND DEV: apply `is-active` class to the relevant `tr` row which will highlight it so the user can see the timeslot they're in. -->
+          <tr>
             <td>
               <em class="hide-visually">Current time slot</em>
-              3 &#8211; 4 hrs
-              <span class="icon icon--arrow-left" aria-hidden="true"></span>
+              2 &#8211; 3
+              <!-- BACKEND DEV: render this `span` along with injecting the `is-active` class above. -->
+              <!-- <span class="icon icon--arrow-left" aria-hidden="true"></span> -->
             </td>
-            <td class="txt-right">$5.00</td>
-            <td class="txt-right">$5.00</td>
+            <td class="txt-right">FREE</td>
           </tr>
           <tr>
-            <td>5 &#8211; 6 hrs</td>
-            <td class="txt-right">$7.00</td>
-            <td class="txt-right">$7.00</td>
+            <td>3 &#8211; 3.5</td>
+            <td class="txt-right">$3.00</td>
           </tr>
           <tr>
-            <td>7 &#8211; 8 hrs</td>
+            <td>3.5 &#8211; 4</td>
+            <td class="txt-right">$4.00</td>
+          </tr>
+          <tr>
+            <td>4 &#8211; 4.5</td>
+            <td class="txt-right">$6.00</td>
+          </tr>
+          <tr>
+            <td>4.5 &#8211; 5</td>
             <td class="txt-right">$9.00</td>
-            <td class="txt-right">$9.00</td>
           </tr>
           <tr>
-            <td>Max daily</td>
-            <td class="txt-right">$13.00</td>
-            <td class="txt-right">$13.00</td>
+            <td>5 &#8211; 5.5</td>
+            <td class="txt-right">$10.00</td>
           </tr>
           <tr>
-            <td>Overnight</td>
-            <td class="txt-right">$33.00</td>
-            <td class="txt-right">$33.00</td>
+            <td>5.5 &#8211; 6</td>
+            <td class="txt-right">$15.00</td>
+          </tr>
+          <tr>
+            <td>6 &#8211; 6.5</td>
+            <td class="txt-right">$20.00</td>
+          </tr>
+          <tr>
+            <td>6.5 &#8211; 7</td>
+            <td class="txt-right">$30.00</td>
+          </tr>
+          <tr>
+            <td>7 &#8211; 7.5</td>
+            <td class="txt-right">$35.00</td>
+          </tr>
+          <tr>
+            <td>7.5 &#8211; 8</td>
+            <td class="txt-right">$40.00</td>
+          </tr>
+          <tr>
+            <td>8 and over</td>
+            <td class="txt-right">$40.00</td>
           </tr>
         </tbody>
       </table>
