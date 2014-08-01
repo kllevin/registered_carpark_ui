@@ -53,29 +53,6 @@ if (isiPhone) {
  * Define functions
  */
 
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-  var method;
-  var noop = function () {};
-  var methods = [
-    'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-    'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-    'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-    'timeStamp', 'trace', 'warn'
-  ];
-  var length = methods.length;
-  var console = (window.console = window.console || {});
-
-  while (length--) {
-    method = methods[length];
-
-    // Only stub undefined methods.
-    if (!console[method]) {
-      console[method] = noop;
-    }
-  }
-}());
-
 // Apply a style hook to each form field label when their inputs are focused
 var formLabelFocus = function() {
   var formLabelFocusHighlight = '.js-form-label-focus';
@@ -144,68 +121,35 @@ var paymentType = {
   // Initiliase
   init: function() {
 
-    // Hide elements on page load
-    $('.js-payment-type-default-hide').hide();
-
     // Radio inputs
-    this.inputPrepaid = $('.js-payment-type-prepaid-input');
-    this.inputPayPerVisit = $('.js-payment-type-pay-per-visit-input');
-    this.inputPayStation = $('.js-payment-type-paystation-input');
+    this.inputPayAtCentre = $('.js-payment-type-pay-centre-input');
+    this.inputPayCreditCard = $('.js-payment-type-pay-credit-card-input');
 
     // The elements to hide/show
-    this.introOne = $('.js-payment-type-intro-1');
-    this.introTwo = $('.js-payment-type-intro-2');
-    this.payStationMsg = $('.js-payment-type-paystation-msg');
+    this.payAtCentreMsg = $('.js-payment-type-pay-centre-msg');
+    this.payCreditCardMsg = $('.js-payment-type-pay-credit-card-msg');
     this.theForm = $('.js-payment-type-form');
-    this.formPrepaidAmt = $('.js-payment-type-form-prepaid-amount');
-    this.formCCV = $('.js-payment-type-ccv');
-
-    // Misc
-    this.miscPaymentTypeGridItem = $('.js-payment-type-grid-item-full');
 
   },
 
-  // Prepaid radio
-  prePaid: function() {
+  // Pay at centre radio
+  payAtCentre: function() {
     // Show
-    paymentType.introOne.show().addClass('fade-in');
-    paymentType.theForm.show().addClass('fade-in');
-    paymentType.formPrepaidAmt.show().addClass('fade-in');
-    paymentType.formCCV.show().addClass('fade-in');
+    paymentType.payAtCentreMsg.removeClass('js-enabled-hide').addClass('fade-in');
 
     // Hide
-    paymentType.introTwo.hide();
-    paymentType.payStationMsg.hide();
-
-    // Make the grid item half width to balance the grid rows
-    paymentType.miscPaymentTypeGridItem.removeClass('one-whole').addClass('non-palm-one-half');
+    paymentType.theForm.addClass('js-enabled-hide');
+    paymentType.payCreditCardMsg.addClass('js-enabled-hide');
   },
 
-  // Pay per visit radio
-  payPerVisit: function() {
+  // Pay by credit card radio
+  payCreditCard: function() {
     // Show
-    paymentType.introTwo.show().addClass('fade-in');
-    paymentType.theForm.show().addClass('fade-in');
+    paymentType.payCreditCardMsg.removeClass('js-enabled-hide').addClass('fade-in');
+    paymentType.theForm.removeClass('js-enabled-hide').addClass('fade-in');
 
     // Hide
-    paymentType.introOne.hide();
-    paymentType.formPrepaidAmt.hide();
-    paymentType.formCCV.hide();
-    paymentType.payStationMsg.hide();
-
-    // Make the grid item full width to balance the grid rows
-    paymentType.miscPaymentTypeGridItem.addClass('one-whole').removeClass('non-palm-one-half');
-  },
-
-  // Paystation radio
-  payStation: function() {
-    // Show
-    paymentType.payStationMsg.show().addClass('fade-in');
-
-    // Hide
-    paymentType.theForm.hide();
-    paymentType.introOne.hide();
-    paymentType.introTwo.hide();
+    paymentType.payAtCentreMsg.addClass('js-enabled-hide');
   }
 
 }
@@ -299,8 +243,7 @@ $(function() {
 
   // Payment type selection for Registration 3
   paymentType.init();
-  paymentType.inputPrepaid.change(paymentType.prePaid);
-  paymentType.inputPayPerVisit.change(paymentType.payPerVisit);
-  paymentType.inputPayStation.change(paymentType.payStation);
+  paymentType.inputPayCreditCard.change(paymentType.payCreditCard);
+  paymentType.inputPayAtCentre.change(paymentType.payAtCentre);
 
 });

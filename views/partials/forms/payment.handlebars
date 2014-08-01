@@ -1,6 +1,6 @@
 <!--
-      BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
-    -->
+  BACKEND DEV: see the form validation rules in the README: https://github.com/westfield/registered_carpark_ui/blob/master/README.md.
+-->
 
 <form action="" method="" name="" novalidate>
   <fieldset>
@@ -24,58 +24,35 @@
         <div class="container island-top islet-btm">
 
           <!-- Choose a payment type -->
-          <div class="txt-center txt-grey-med mrg-dbl">
+          <div class="txt-center txt-grey-med mrg-base">
             <h3 class="hide-visually js-disabled-hide">Choose a payment type</h3>
             <ul class="horiz-list horiz-list--gutter-base mrg-base js-disabled-hide">
               <li>
-                <label for="prepaid" class="block">Prepaid</label>
-                <input type="radio" id="prepaid" class="js-payment-type-prepaid-input" name="payment-type" checked>
+                <label for="pay-centre" class="block">Pay In Centre</label>
+                <input type="radio" id="pay-centre" class="js-payment-type-pay-centre-input" name="payment-type" checked>
               </li>
               <li>
-                <label for="pay-per-visit" class="block">Pay Per Visit</label>
-                <input type="radio" id="pay-per-visit" class="js-payment-type-pay-per-visit-input" name="payment-type">
-              </li>
-              <li>
-                <label for="paystation" class="block">Paystation</label>
-                <input type="radio" id="paystation" class="js-payment-type-paystation-input" name="payment-type">
+                <label for="pay-credit-card" class="block">Pay by Credit Card</label>
+                <input type="radio" id="pay-credit-card" class="js-payment-type-pay-credit-card-input" name="payment-type">
               </li>
             </ul>
-            <p class="flush-btm js-payment-type-intro-1"><small class="txt-sml">We'll deduct the prepaid amount from your account when it's below $10.</small></p>
-            <p class="flush-btm js-payment-type-intro-2 js-payment-type-default-hide js-disabled-hide"><small class="txt-sml">We'll just charge your credit card every time you visit.</small></p>
           </div>
           <!-- //Choose a payment type -->
 
-          <p class="txt-center mrg-half js-payment-type-paystation-msg js-payment-type-default-hide js-disabled-hide">No credit card needed. Just pay at the paystation when you visit.</p>
+          <!-- Payment type messages -->
+          <p class="txt-center mrg-half js-payment-type-pay-centre-msg">No credit card details needed. Just pay at the paystation before leaving the Centre if a parking fee is payable.</p>
 
-          <div class="js-payment-type-form">
+          <p class="txt-center mrg-dbl js-payment-type-pay-credit-card-msg js-enabled-hide">No need to queue at a pay station! We’ll charge your credit card if a parking fee is payable.</p>
+          <!-- //Payment type messages -->
+
+          <!-- Payment type form -->
+          <div class="js-payment-type-form js-enabled-hide">
 
             <!-- Form row -->
             <div class="grid grid--flush">
 
-              <!-- Prepaid Amount -->
-              <div class="grid__item non-palm-one-half js-payment-type-form-prepaid-amount">
-                <div class="form-field mrg-base js-form-label-focus">
-                  <label class="form-field__lbl block" for="prepaidAmount">
-                    Select Prepaid Amount
-                    <strong class="req-field" title="Required">*</strong>
-                  </label>
-                  <span class="select-fancy inline-block">
-                    <select id="prepaidAmount" aria-required="true" required>
-                      <option selected>Select amount&hellip;</option>
-                      <option>$20</option>
-                      <option>$50</option>
-                      <option>$80</option>
-                      <option>$100</option>
-                    </select>
-                    <span class="select-fancy__arrow icon icon--arrow-down-full icon--flush-top" aria-hidden="true"></span>
-                  </span>
-                  <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-1">Please choose a prepaid amount</p> -->
-                </div>
-              </div>
-              <!-- //Prepaid Amount -->
-
               <!-- Card Number -->
-              <div class="grid__item non-palm-one-half js-payment-type-grid-item-full">
+              <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-base js-form-label-focus">
                   <label class="form-field__lbl block" for="cardNumber">
                     <span class="grid grid--flush grid--gutter-half">
@@ -93,18 +70,12 @@
                       </span>
                     </span>
                   </label>
-                  <input type="text" id="cardNumber" class="txt-input js-credit-card-type-input" autocomplete="off" maxlength="17" aria-required="true" required>
+                  <input type="text" id="cardNumber" class="txt-input js-credit-card-type-input" autocomplete="off" maxlength="16" aria-required="true" required>
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-2">Please enter your card number</p> -->
                   <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-3">Please enter a valid credit card number</p> -->
                 </div>
               </div>
               <!-- //Card Number -->
-
-            </div>
-            <!-- //Form row -->
-
-            <!-- Form row -->
-            <div class="grid grid--flush">
 
               <!-- Expiry -->
               <div class="grid__item non-palm-one-half mrg-base js-form-label-focus js-faux-label-container">
@@ -174,6 +145,12 @@
               </div>
               <!-- //Expiry -->
 
+            </div>
+            <!-- //Form row -->
+
+            <!-- Form row -->
+            <div class="grid grid--flush">
+
               <!-- Name on Card -->
               <div class="grid__item non-palm-one-half">
                 <div class="form-field mrg-base js-form-label-focus">
@@ -186,12 +163,6 @@
                 </div>
               </div>
               <!-- //Name on Card -->
-
-            </div>
-            <!-- //Form row -->
-
-            <!-- Form row -->
-            <div class="grid grid--flush js-payment-type-ccv">
 
               <!-- CCV -->
               <div class="grid__item non-palm-one-half mrg-base">
@@ -212,7 +183,6 @@
                       <input type="text" id="ccv" class="txt-input" autocomplete="off" maxlength="4" aria-required="true" required>
                     </div>
                   </div>
-                  <div class="grid__item one-half"></div>
                 </div>
                 <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-6">Please enter your CCV number</p> -->
                 <!-- <p class="form-field__msg form-field__msg--validation feedback feedback--inline feedback--error" id="form-error-7">Please enter a valid CCV number</p> -->
@@ -223,6 +193,7 @@
             <!-- //Form row -->
 
           </div>
+          <!-- //Payment type form -->
 
         </div>
       </div>
