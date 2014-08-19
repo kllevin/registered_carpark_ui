@@ -95,16 +95,24 @@
               </span>
               Parking dd/mm/yy
               <span class="block">Entry hh:mm Exit hh:mm</span>
-              <!-- BACKEND DEV: additional items get rendered in a `span` and prefixed with an asterisk: "*" -->
-              <span class="block txt-italic txt-grey-med hide-fully--palm">*{numbersold} x {productname} – {productdescription}</span>
             </td>
             <td class="hide-fully--palm-table-cell">
               <span class="block txt-break-word">Centre name</abbr>
             </td>
             <td class="txt-right">
               <span class="block">$99</span>
-              <!-- BACKEND DEV: additional items costs get rendered in a `span` and prefixed with an asterisk: "*" -->
-              <span class="block txt-italic txt-grey-med hide-fully--palm">*$39</span>
+            </td>
+          </tr>
+          <!-- BACKEND DEV: a new row (`tr`) for each Extra item -->
+          <tr>
+            <td></td>
+            <td class="hide-fully--palm-table-cell"></td>
+            <td>
+              <span class="block txt-italic txt-grey-med">{numbersold} x {productname} – {productdescription}</span>
+            </td>
+            <td class="hide-fully--palm-table-cell"></td>
+            <td class="txt-right">
+              <span class="block txt-italic txt-grey-med">$39</span>
             </td>
           </tr>
         </tbody>
@@ -136,7 +144,7 @@
 <div class="panel panel--unfocused divider divider--btm hide-fully--non-palm">
   <div class="panel__main">
     <div class="container island-ends txt-center">
-      <p><span class="txt-grey-med">Log in via desktop to see entire transaction details or contact</span> <a href="tel:0295256344">Miranda Parking</a>.</p>
+      <p><span class="txt-grey-med">Log in via desktop to see entire transaction details and to be able to search transactions via a date range, or contact</span> <a href="tel:0295256344">Miranda Parking</a>.</p>
     </div>
   </div>
 </div>
