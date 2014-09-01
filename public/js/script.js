@@ -178,11 +178,11 @@ $.fn.toggleMenu = function() {
 var addRemoveVehicles = function() {
 
   // Elements
-  var addBtn = $('.js-license-plate-add-btn');
-  var removeBtn = $('.js-license-plate-remove-btn');
+  var addBtn = $('.js-licence-plate-add-btn');
+  var removeBtn = $('.js-licence-plate-remove-btn');
   var hideShow = 'js-hide-show';
-  var additionVehicle = $('.js-license-plate-additional');
-  var additionVehicleContainer = $('.js-license-plate-additional-container');
+  var additionVehicle = $('.js-licence-plate-additional');
+  var additionVehicleContainer = $('.js-licence-plate-additional-container');
 
   // Add
   addBtn.on('click', function() {
